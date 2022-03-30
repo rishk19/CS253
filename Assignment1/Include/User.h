@@ -1,6 +1,6 @@
 #include<string>
 class user{
-    private:
+    protected:
     std::string name;
     long long int id;
     std::string password;
