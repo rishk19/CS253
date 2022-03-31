@@ -8,7 +8,7 @@ D:\GnuWin32\bin\make.exe all --print-data-base --no-builtin-variables --no-built
 # This program built for i386-pc-mingw32
  
 
-# Make data base, printed on Thu Mar 31 11:24:04 2022
+# Make data base, printed on Thu Mar 31 12:44:39 2022
 
 # Variables
 
@@ -37,8 +37,7 @@ SHELL := sh.exe
 # environment
 WINDIR = C:\WINDOWS
 # environment
-VSCODE 
-_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
 VBOX_MSI_INSTALL_PATH = D:\Oracle\VirtualBox\
 # environment
@@ -58,12 +57,11 @@ PROGRAMW6432 = C:\Program Files
 # environment
 PROGRAMDATA = C:\ProgramData
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-29099f67-98c6-4f24-9070-f6edc71b8aff-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-448edd9f-9508-46d7-8e11-71a2d5311fda-sock
 # environment
 VSCODE_CWD = D:\Microsoft VS Code
 # environment
-PATH = C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\TDM-GCC-64\bin;C:\Program Files (x86)\Lua\5.1;C:\Program Files (x86)\Lua\5.1\clibs;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\Dev-Cpp\MinGW64\bin;C:\cygwin64\bin;C:\Program Files (x86)\KLatexFormula-4.1.0\bin;D:\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Git LFS;C:\Users\RISHABH\AppData\Local\Microsoft\WindowsApps;C:\Users\RISHABH\Desktop\bin;C:\iverilog\bin;C:\iverilog\gtkwave\bin;C:\Users\RISHABH\AppData\Local\GitHubDesktop\bin;C:\Users\RISHABH\CS771_IITK;C:\msys64\mingw64\bi 
-n;C:\Program Files\CMake\bin;D:\GnuWin32\bin;
+PATH = C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\TDM-GCC-64\bin;C:\Program Files (x86)\Lua\5.1;C:\Program Files (x86)\Lua\5.1\clibs;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\Dev-Cpp\MinGW64\bin;C:\cygwin64\bin;C:\Program Files (x86)\KLatexFormula-4.1.0\bin;D:\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Git LFS;C:\Users\RISHABH\AppData\Local\Microsoft\WindowsApps;C:\Users\RISHABH\Desktop\bin;C:\iverilog\bin;C:\iverilog\gtkwave\bin;C:\Users\RISHABH\AppData\Local\GitHubDesktop\bin;C:\Users\RISHABH\CS771_IITK;C:\msys64\mingw64\bin;C:\Program Files\CMake\bin;D:\GnuWin32\bin;
 # environment
 COMMONPROGRAMW6432 = C:\Program Files\Common Files
 # environment
@@ -87,7 +85,7 @@ ELECTRON_RUN_AS_NODE = 1
 # automatic
 %F = $(notdir $%)
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_2436_ABCVQIZDSAUPZROR
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_8868_JGANUNVEMVNINOFT
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -103,8 +101,7 @@ USERNAME = RISHABH
 # environment
 PUBLIC = C:\Users\Public
 # environment
-VSCODE_AMD_ENTRYPOINT = vs/workbench 
-/api/node/extensionHostProcess
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 VSCODE_CODE_CACHE_PATH = C:\Users\RISHABH\AppData\Roaming\Code\CachedData\c722ca6c7eed3d7987c0d5c3df5c45f6b15e77d1
 # environment
@@ -120,8 +117,7 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # environment
 USERDOMAIN = R-KOTHARI
 # environment
-LUA_DEV = C:\Progr 
-am Files (x86)\Lua\5.1
+LUA_DEV = C:\Program Files (x86)\Lua\5.1
 # environment
 MAKE = D:\GnuWin32\bin\make.exe
 # default
@@ -139,8 +135,7 @@ LOCALAPPDATA = C:\Users\RISHABH\AppData\Local
 # environment
 PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;"C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules;C:\Program Files (x86)\Dev-Cpp\MinGW64\bin";
 # default
-MAKE_COMMAND  
-:= D:/GnuWin32/bin/make
+MAKE_COMMAND := D:/GnuWin32/bin/make
 # environment
 PROCESSOR_ARCHITEW6432 = AMD64
 # default
@@ -161,8 +156,7 @@ COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
 PROMPT = $P$G
 # environment
 MFLAGS = -Rrqp
-# au 
-tomatic
+# automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
 SYSTEMROOT = C:\WINDOWS
@@ -187,8 +181,7 @@ LUA_PATH = ;;C:\Program Files (x86)\Lua\5.1\lua\?.luac
 # automatic
 ^F = $(notdir $^)
 # default
-SUFFIX 
-ES := 
+SUFFIXES := 
 # environment
 SYSTEMDRIVE = C:
 # environment
@@ -206,14 +199,13 @@ PROCESSOR_LEVEL = 6
 # environment
 FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
 # environment
-VSCODE_PID = 2436
+VSCODE_PID = 8868
 # environment
 USERDOMAIN_ROAMINGPROFILE = R-KOTHARI
 # variable set hash-table stats:
 # Load=95/1024=9%, Rehash=0, Collisions=9/113=8%
 
-# Pattern-specific Variable V 
-alues
+# Pattern-specific Variable Values
 
 # No pattern-specific variable values.
 
@@ -224,32 +216,27 @@ alues
 # C:\Users\RISHABH\Desktop\bin: could not be stat'd.
 # C:\WINDOWS\System32\WindowsPowerShell\v1.0\ (key C:/WINDOWS/System32/WindowsPowerShell/v1.0/, mtime 1615227296): 30 files, no impossibilities.
 # C:\WINDOWS\System32\Wbem (key C:/WINDOWS/System32/Wbem, mtime 1647363099): 156 files, no impossibilities.
-# . (key d:/CS253, mtime 1648649296): 
- 6 files, no impossibilities.
+# . (key d:/CS253, mtime 1648649296): 6 files, no impossibilities.
 # C:\TDM-GCC-64\bin: could not be stat'd.
 # D:\Microsoft VS Code\bin (key D:/Microsoft VS Code/bin, mtime 1647251168): 4 files, no impossibilities.
 # D:\GnuWin32\bin (key D:/GnuWin32/bin, mtime 1647477737): 5 files, no impossibilities.
 # C:\Users\RISHABH\AppData\Local\GitHubDesktop\bin (key C:/Users/RISHABH/AppData/Local/GitHubDesktop/bin, mtime 1612292574): 4 files, no impossibilities.
-# C:\Users\RISHABH\AppData\Local\Microsoft\WindowsApps (key C:/Users/RISHABH/AppData/Local/M 
-icrosoft/WindowsApps, mtime 1648061419): 26 files, no impossibilities.
+# C:\Users\RISHABH\AppData\Local\Microsoft\WindowsApps (key C:/Users/RISHABH/AppData/Local/Microsoft/WindowsApps, mtime 1648061419): 26 files, no impossibilities.
 # C:\WINDOWS\System32\OpenSSH\: could not be stat'd.
 # C:\Program Files (x86)\KLatexFormula-4.1.0\bin (key C:/Program Files (x86)/KLatexFormula-4.1.0/bin, mtime 1605870373): 21 files, no impossibilities.
 # C:\Program Files\Intel\Intel(R) Management Engine Components\DAL (key C:/Program Files/Intel/Intel(R) Management Engine Components/DAL, mtime 1638347071): 4 files, no impossibilities.
-# C:\WINDOWS (key C:/WINDOWS, mtime 1647446209): 13 
-6 files, no impossibilities.
+# C:\WINDOWS (key C:/WINDOWS, mtime 1647446209): 136 files, no impossibilities.
 # C:\cygwin64\bin: could not be stat'd.
 # C:\Program Files\Microsoft SQL Server\120\Tools\Binn\ (key C:/Program Files/Microsoft SQL Server/120/Tools/Binn/, mtime 1559754678): 4 files, no impossibilities.
 # C:\msys64\mingw64\bin (key C:/msys64/mingw64/bin, mtime 1647161339): 207 files, no impossibilities.
 # C:\iverilog\gtkwave\bin (key C:/iverilog/gtkwave/bin, mtime 1610514464): 52 files, no impossibilities.
-# C:\Program Files\Git\cmd (key C:/Program Files/Git/cmd, mtime 16122937 
-47): 8 files, no impossibilities.
+# C:\Program Files\Git\cmd (key C:/Program Files/Git/cmd, mtime 1612293747): 8 files, no impossibilities.
 # C:\WINDOWS\system32 (key C:/WINDOWS/system32, mtime 1648310491): 3106 files, no impossibilities.
 # C:\Program Files\Git LFS (key C:/Program Files/Git LFS, mtime 1647784180): 5 files, no impossibilities.
 # C:\Program Files (x86)\Dev-Cpp\MinGW64\bin: could not be stat'd.
 # C:\Program Files\CMake\bin (key C:/Program Files/CMake/bin, mtime 1647253379): 7 files, no impossibilities.
 # C:\Program Files (x86)\Lua\5.1\clibs: could not be stat'd.
-# C:\iverilog\bin (key C:/iverilog/ 
-bin, mtime 1610514461): 13 files, no impossibilities.
+# C:\iverilog\bin (key C:/iverilog/bin, mtime 1610514461): 13 files, no impossibilities.
 # C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL (key C:/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL, mtime 1638347071): 7 files, no impossibilities.
 
 # 3801 files, no impossibilities in 27 directories.
@@ -266,8 +253,7 @@ all:
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has not been updated.
-# variable set hash 
--table stats:
+# variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
@@ -288,8 +274,7 @@ makefile:
 
 # Not a target:
 .SUFFIXES:
-#  Implicit rule 
- search has not been done.
+#  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
@@ -309,16 +294,15 @@ GNUmakefile:
 
 # No `vpath' search paths.
 
-# No general (`VPA 
-make: *** No rule to make target `all'.  Stop.
- 
-TH' variable) search path.
+# No general (`VPATH' variable) search path.
 
 # # of strings in strcache: 0
 # # of strcache buffers: 0
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Thu Mar 31 11:24:04 2022
+# Finished Make data base on Thu Mar 31 12:44:39 2022
 
  
+make: *** No rule to make target `all'.  Stop.
+
