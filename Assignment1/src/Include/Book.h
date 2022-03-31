@@ -1,6 +1,6 @@
 #include<string>
 class book {
-    private:
+    public:
     std::string author;
     std::string title;
     long long int ISBN;

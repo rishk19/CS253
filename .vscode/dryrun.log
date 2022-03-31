@@ -1,0 +1,7 @@
+D:\GnuWin32\bin\make.exe --dry-run --keep-going --print-directory
+make: Entering directory `d:/CS253'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+ 
+make: Leaving directory `d:/CS253'
+ 
