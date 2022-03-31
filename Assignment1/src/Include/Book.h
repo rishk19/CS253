@@ -15,5 +15,5 @@ class book {
     //void show_duedate();
 
     //Friend Class
-    //friend class librarian;
+    friend class librarian;
 };
