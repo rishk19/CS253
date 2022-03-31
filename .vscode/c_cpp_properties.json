@@ -11,7 +11,7 @@
                 "_UNICODE"
             ],
             "windowsSdkVersion": "10.0.20348.0",
-            "compilerPath": "D:/MinGW/bin/g++.exe",
+            "compilerPath": "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x86/cl.exe",
             "cStandard": "c17",
             "cppStandard": "c++17",
             "intelliSenseMode": "${default}",
