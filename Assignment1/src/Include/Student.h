@@ -3,7 +3,7 @@
 #include "Book_database.h"
 #include "User.h"
 class student: public user{
-    protected:
+    public:
     long long int fine_amount;
     book_database issued_book_list;
     

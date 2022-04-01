@@ -9,5 +9,7 @@ int main(){
     
     all_books_list.add();
 
+    all_books_list.update();
+
     all_books_list.remove();
 }

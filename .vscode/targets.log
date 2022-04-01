@@ -6,9 +6,8 @@ D:\GnuWin32\bin\make.exe all --print-data-base --no-builtin-variables --no-built
 # PARTICULAR PURPOSE.
 
 # This program built for i386-pc-mingw32
- 
 
-# Make data base, printed on Fri Apr 01 14:38:01 2022
+# Make data base, printed on Fri Apr 01 15:10:14 2022
 
 # Variables
 
@@ -55,7 +54,7 @@ PROGRAMW6432 = C:\Program Files
 # environment
 PROGRAMDATA = C:\ProgramData
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-14e68d25-4261-4ad8-b7d9-b98eaadf4407-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-80cbad23-e99a-4d68-b20b-7ca5a4c5fbe5-sock
 # environment
 VSCODE_CWD = D:\Microsoft VS Code
 # environment
@@ -83,7 +82,7 @@ ELECTRON_RUN_AS_NODE = 1
 # automatic
 %F = $(notdir $%)
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_23900_LSSAZZUTOAHFLGAG
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_14420_IKSOGKXHXUUVSKFK
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -103,7 +102,7 @@ VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 VSCODE_CODE_CACHE_PATH = C:\Users\RISHABH\AppData\Roaming\Code\CachedData\e18005f0f1b33c29e81d732535d8c0e47cafb0b5
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
 COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
 # environment
@@ -165,6 +164,8 @@ SYSTEMROOT = C:\WINDOWS
 # environment
 APPDATA = C:\Users\RISHABH\AppData\Roaming
 # environment
+__COMPAT_LAYER = DetectorsAppHealth
+# environment
 TEMP = C:\Users\RISHABH\AppData\Local\Temp
 # environment
 COMSPEC = C:\WINDOWS\system32\cmd.exe
@@ -178,7 +179,6 @@ LC_ALL = C
 LUA_PATH = ;;C:\Program Files (x86)\Lua\5.1\lua\?.luac
 # automatic
 ^F = $(notdir $^)
- 
 # default
 SUFFIXES := 
 # environment
@@ -196,11 +196,11 @@ LANG = C
 # environment
 PROCESSOR_LEVEL = 6
 # environment
-VSCODE_PID = 23900
+VSCODE_PID = 14420
 # environment
 USERDOMAIN_ROAMINGPROFILE = R-KOTHARI
 # variable set hash-table stats:
-# Load=93/1024=9%, Rehash=0, Collisions=9/111=8%
+# Load=94/1024=9%, Rehash=0, Collisions=9/112=8%
 
 # Pattern-specific Variable Values
 
@@ -214,38 +214,32 @@ USERDOMAIN_ROAMINGPROFILE = R-KOTHARI
 # C:\WINDOWS\System32\WindowsPowerShell\v1.0\ (key C:/WINDOWS/System32/WindowsPowerShell/v1.0/, mtime 1615227296): 30 files, no impossibilities.
 # C:\WINDOWS\System32\Wbem (key C:/WINDOWS/System32/Wbem, mtime 1647363099): 156 files, no impossibilities.
 # . (key d:/CS253, mtime 1648803380): 6 files, no impossibilities.
-# C:\TDM-GCC-64\bi 
-n: could not be stat'd.
+# C:\TDM-GCC-64\bin: could not be stat'd.
 # D:\Microsoft VS Code\bin (key D:/Microsoft VS Code/bin, mtime 1648804013): 4 files, no impossibilities.
 # D:\GnuWin32\bin (key D:/GnuWin32/bin, mtime 1647477737): 5 files, no impossibilities.
 # C:\Users\RISHABH\AppData\Local\GitHubDesktop\bin (key C:/Users/RISHABH/AppData/Local/GitHubDesktop/bin, mtime 1612292574): 4 files, no impossibilities.
-# C:\Users\RISHABH\AppData\Local\Microsoft\WindowsApps (key C:/Users/RISHABH/AppData/Local/Microsoft/WindowsApps, mtime 1648061419): 26 file 
-s, no impossibilities.
+# C:\Users\RISHABH\AppData\Local\Microsoft\WindowsApps (key C:/Users/RISHABH/AppData/Local/Microsoft/WindowsApps, mtime 1648061419): 26 files, no impossibilities.
 # C:\WINDOWS\System32\OpenSSH\: could not be stat'd.
 # C:\Program Files (x86)\KLatexFormula-4.1.0\bin (key C:/Program Files (x86)/KLatexFormula-4.1.0/bin, mtime 1605870373): 21 files, no impossibilities.
 # D:\Strawberry\c\bin (key D:/Strawberry/c/bin, mtime 1648749186): 115 files, no impossibilities.
 # C:\Program Files\Intel\Intel(R) Management Engine Components\DAL (key C:/Program Files/Intel/Intel(R) Management Engine Components/DAL, mtime 1638347071): 4 files, no impossibilities.
-# 
- C:\WINDOWS (key C:/WINDOWS, mtime 1647446209): 136 files, no impossibilities.
+# C:\WINDOWS (key C:/WINDOWS, mtime 1647446209): 136 files, no impossibilities.
 # D:\Strawberry\perl\bin (key D:/Strawberry/perl/bin, mtime 1648749244): 184 files, no impossibilities.
 # C:\cygwin64\bin: could not be stat'd.
 # D:\Strawberry\perl\site\bin (key D:/Strawberry/perl/site/bin, mtime 1648749178): 2 files, no impossibilities.
 # C:\Program Files\Microsoft SQL Server\120\Tools\Binn\ (key C:/Program Files/Microsoft SQL Server/120/Tools/Binn/, mtime 1559754678): 4 files, no impossibilities.
-# C:\msys64\m 
-ingw64\bin (key C:/msys64/mingw64/bin, mtime 1647161339): 207 files, no impossibilities.
+# C:\msys64\mingw64\bin: could not be stat'd.
 # C:\iverilog\gtkwave\bin (key C:/iverilog/gtkwave/bin, mtime 1610514464): 52 files, no impossibilities.
 # C:\Program Files\Git\cmd (key C:/Program Files/Git/cmd, mtime 1612293747): 8 files, no impossibilities.
 # C:\WINDOWS\system32 (key C:/WINDOWS/system32, mtime 1648310491): 3106 files, no impossibilities.
 # C:\Program Files\Git LFS (key C:/Program Files/Git LFS, mtime 1647784180): 5 files, no impossibilities.
-# C:\Pr 
-ogram Files (x86)\Dev-Cpp\MinGW64\bin: could not be stat'd.
+# C:\Program Files (x86)\Dev-Cpp\MinGW64\bin: could not be stat'd.
 # C:\Program Files\CMake\bin (key C:/Program Files/CMake/bin, mtime 1647253379): 7 files, no impossibilities.
 # C:\Program Files (x86)\Lua\5.1\clibs: could not be stat'd.
 # C:\iverilog\bin (key C:/iverilog/bin, mtime 1610514461): 13 files, no impossibilities.
-# C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL (key C:/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL, mtime 1638347071): 7 files, no impossibili 
-ties.
+# C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL (key C:/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL, mtime 1638347071): 7 files, no impossibilities.
 
-# 4102 files, no impossibilities in 30 directories.
+# 3895 files, no impossibilities in 30 directories.
 
 # Implicit Rules
 
@@ -270,8 +264,7 @@ all:
 
 # Not a target:
 makefile:
-#  A default, MAKEFILES,  
-or -include/sinclude makefile.
+#  A default, MAKEFILES, or -include/sinclude makefile.
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has been updated.
@@ -290,8 +283,7 @@ GNUmakefile:
 #  A default, MAKEFILES, or -include/sinclude makefile.
 #  Implicit rule search has been done.
 #  File does not exist.
-#  F 
-ile has been updated.
+#  File has been updated.
 #  Failed to be updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
@@ -309,9 +301,8 @@ ile has been updated.
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Fri Apr 01  
-make: *** No rule to make target `all'.  Stop.
-
-14:38:01 2022
+# Finished Make data base on Fri Apr 01 15:10:14 2022
 
  
+make: *** No rule to make target `all'.  Stop.
+

@@ -1,7 +1,7 @@
 #pragma once
 #include<string>
 class user{
-    protected:
+    public:
     std::string name;
     long long int id;
     std::string password;

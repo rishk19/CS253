@@ -43,15 +43,14 @@ void book_database::remove(){
 
     long long int n = search(ISBN_requested);
     if(n == -1){
-        cout << "Book not found in the database"<< endl; 
+        cout << "Book not found in the database."<< endl; 
     }
     else{
-        cout << "The book "<< book_list[n].title << " removed from the database" << endl;
+        cout << "The book "<< book_list[n].title << " removed from the database." << endl;
         book_list.erase(book_list.begin()+n);
     }
     return; 
 }
-
 void book_database::update(){
     cout << "Enter ISBN of the book : ";
     long long int ISBN_requested;
@@ -59,18 +58,49 @@ void book_database::update(){
     cout <<endl;
     long long int n = search(ISBN_requested);
     if(n == -1){
-        cout << "Book not found in the database"<< endl; 
+        cout << "Book not found in the database."<< endl; 
     }
     else{
-        int flag = 1;
-        while(flag){
-            cout <<"Enter 1 if you want to change the book title" <<endl;
-            cout <<"Enter 2 if you want to change the book author" <<endl;
-            cout <<"Enter 3 if you want to change the book ISBN" <<endl;
-            cout <<"Enter 4 if you want to change the book publication"<<endl;
-            cout <<"Enter 5 if you want to change the issue status of the book"<<endl;
-            cout <<"Enter 6 if you want to end the update operation"<<endl;
+
+        book book_1 = book_list[n];
+        cout <<"Enter 1 if you want to change the book title" <<endl;
+        cout <<"Enter 2 if you want to change the book author" <<endl;
+        cout <<"Enter 3 if you want to change the book ISBN" <<endl;
+        cout <<"Enter 4 if you want to change the book publication"<<endl;
+
+        int i;
+        cout << "Enter your option : ";
+        cin >> i;
+        cout <<endl;
+
+        switch(i){
+            case 1:
+                cout << "Enter new book title: ";
+                cin >> book_1.title;
+                cout << endl;
+                break;
+            case 2:
+                cout << "Enter new book author: ";
+                cin >> book_1.author;
+                cout << endl;
+                break;
+            case 3:
+                cout << "Enter new book ISBN: ";
+                cin >> book_1.ISBN;
+                cout << endl;
+                break;
+            case 4:
+                cout << "Enter new book publication: ";
+                cin >> book_1.publication;
+                cout << endl;
+                break;
+            default:
+                cout << "Incorrect operation the process did not complete. Please try again !"<<endl;
+                break;
         }
+        book_list[n] = book_1;
+
+        
     }
     return;
 }

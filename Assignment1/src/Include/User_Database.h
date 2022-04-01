@@ -2,16 +2,21 @@
 #include<vector>
 #include "user.h"
 #include "Librarian.h"
+#include "Student.h"
+#include "Professor.h"
 
 class user_database{
-    private:
+    public:
     std::vector<user> user_list;
+    std::vector<student> student_list;
+    std::vector<professor> professor_list;
+    std::vector<librarian> librarian_list;
 
     //Functions
-    void add(user user_1);
-    void update(user user_1);
-    void remove(user user_1);
-    long long int search(user user_1);
+    void add();
+    void update();
+    void remove();
+    std::vector<long long int> search(long long int ID);
 
     //Friend Classes
     friend class librarian;
