@@ -9,9 +9,9 @@ class book_database{
 
     //Functions
     void add(void);
-    void update(book book_1);
-    void remove(book book_1);
-    long long int search(book book_1);
+    void update(long long int ISBN);
+    void remove(long long int ISBN);
+    long long int search(long long int ISBN_requested);
 
     //Friend Classes
     friend class librarian;
