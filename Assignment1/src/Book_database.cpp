@@ -35,14 +35,42 @@ long long int book_database::search(long long int ISBN_requested){
     return(-1);
 }
 
-void book_database::remove(long long int ISBN_requested){
+void book_database::remove(){
+    cout << "Enter ISBN of the book : ";
+    long long int ISBN_requested;
+    cin >> ISBN_requested;
+    cout <<endl;
+
     long long int n = search(ISBN_requested);
     if(n == -1){
         cout << "Book not found in the database"<< endl; 
     }
     else{
-        cout << book_list[n].title << " removed from the database" << endl;
+        cout << "The book "<< book_list[n].title << " removed from the database" << endl;
         book_list.erase(book_list.begin()+n);
     }
     return; 
+}
+
+void book_database::update(){
+    cout << "Enter ISBN of the book : ";
+    long long int ISBN_requested;
+    cin >> ISBN_requested;
+    cout <<endl;
+    long long int n = search(ISBN_requested);
+    if(n == -1){
+        cout << "Book not found in the database"<< endl; 
+    }
+    else{
+        int flag = 1;
+        while(flag){
+            cout <<"Enter 1 if you want to change the book title" <<endl;
+            cout <<"Enter 2 if you want to change the book author" <<endl;
+            cout <<"Enter 3 if you want to change the book ISBN" <<endl;
+            cout <<"Enter 4 if you want to change the book publication"<<endl;
+            cout <<"Enter 5 if you want to change the issue status of the book"<<endl;
+            cout <<"Enter 6 if you want to end the update operation"<<endl;
+        }
+    }
+    return;
 }

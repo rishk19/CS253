@@ -7,12 +7,11 @@ class book {
     std::string title;
     long long int ISBN;
     std::string publication;
-    protected:
     user issuer;
     
     //Functions
-    //void book_request();
-    //void show_duedate();
+    void book_request();
+    void show_duedate();
 
     //Friend Class
     friend class librarian;

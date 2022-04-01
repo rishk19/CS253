@@ -10,4 +10,5 @@ class student: public user{
     //Functions
     void calculate_fines();
     void clear_fine_amount();
+    student();
 };
