@@ -9,4 +9,7 @@ class user{
     //Type = 0 for student
     //Type = 1 for Professor
     //Type = 2 for Librarian
+
+    //Function
+    void display();
 };

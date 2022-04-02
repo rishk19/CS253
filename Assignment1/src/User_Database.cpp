@@ -8,12 +8,14 @@ void user_database::add(){
     cin.ignore();
     cout << "Enter username : ";
     getline(cin, user_1.name);
-
+    cout <<endl;
     cout << "Enter Password: ";
     cin >> user_1.password;
+    cout<<endl;
 
     cout << "Enter ID: ";
     cin >> user_1.id;
+    cout <<endl;
 
 
     cout << "Enter 0 if user is student" <<endl;
@@ -78,7 +80,7 @@ vector <long long int> user_database::search(long long int ID){
     i4 = -1;
 
     for (long long int i =0; i<user_list.size(); i++){
-        if(user_list[i].id = ID){
+        if(user_list[i].id == ID){
             i1 = i;
         }
     }
@@ -91,21 +93,21 @@ vector <long long int> user_database::search(long long int ID){
     else{
         indices.push_back(i1);
         for (long long int i = 0; i<student_list.size();++i){
-            if(student_list[i].id = ID){
+            if(student_list[i].id == ID){
                 i2 = i;
             }
         }
         indices.push_back(i2);
 
         for (long long int i = 0; i<professor_list.size();++i){
-            if(professor_list[i].id = ID){
+            if(professor_list[i].id == ID){
                 i3 = i;
             }
         }  
         indices.push_back(i3);    
 
         for (long long int i = 0; i<librarian_list.size();++i){
-            if(librarian_list[i].id = ID){
+            if(librarian_list[i].id == ID){
                 i4 = i;
             }
         }  
@@ -116,7 +118,7 @@ vector <long long int> user_database::search(long long int ID){
 
 void user_database::remove(){
     long long int ID;
-    cout << "Enter ID:";
+    cout <<endl<< "Enter ID:";
     cin >> ID;
     cout << endl;
 
@@ -162,8 +164,282 @@ void user_database::update(){
     cin >> ID;
     cout <<endl;
 
+    vector<long long int> indices = search(ID);
+
+    if(indices[0]==-1){
+        cout << "No such user found in the database." <<endl;
+        return;
+    }
+    else{
+        user user_1 = user_list[indices[0]];
+        cout << "Press 1 if you want to change user name"<<endl;
+        cout << "Press 2 if you want to change user password" << endl;
+        cout << "Press 3 if you want to change user id" << endl;
+        cout << "Press 4 if you want to change user type" <<endl;
+        cout << "Press 5 if you dont want to change anything"<<endl;
+        cout << "Enter your option"<<endl;
+
+        int option;
+        cin >> option;
+
+        switch(user_1.type){
+            case 0 :   // When original user type is student
+            {
+                switch(option){
+                    case 1:
+                    {
+                        cout << "Enter new name : ";
+                        cin >> student_list[indices[1]].name;
+                        cout << endl;
+                        user_list[indices[0]].name = student_list[indices[1]].name;
+                        break;
+                    }
+                    case 2:
+                    {
+                        cout << "Enter new password :";
+                        cin >> student_list[indices[1]].password;
+                        cout << endl;
+                        user_list[indices[0]].password = student_list[indices[1]].password;
+                        break;
+                    }
+                    case 3:
+                    {
+                        cout << "Enter new id :";
+                        cin >> student_list[indices[1]].id;
+                        cout << endl;
+                        user_list[indices[0]].id = student_list[indices[1]].id;
+                        break;
+                    }
+                    case 4:
+                    {
+                        cout << "Enter new user type :";
+                        cin >> user_list[indices[0]].type;
+                        cout << endl;
+                        switch(user_list[indices[0]].type){
+                            case 0:
+                            {
+                                break;
+                            }
+                            case 1:
+                            {   
+                                student student_1 = student_list[indices[1]];
+                                student_list.erase(student_list.begin()+indices[1]);
+                                professor professor_1;
+                                professor_1.name = student_1.name;
+                                professor_1.password = student_1.password;
+                                professor_1.id = student_1.id;
+                                professor_list.push_back(professor_1);
+                                break;
+                            }
+                            case 2:
+                            {
+                                student student_1 = student_list[indices[1]];
+                                student_list.erase(student_list.begin()+indices[1]);
+                                librarian librarian_1;
+                                librarian_1.name = student_1.name;
+                                librarian_1.password = student_1.password;
+                                librarian_1.id = student_1.id;
+                                librarian_list.push_back(librarian_1);
+                                break;
+                            }
+                            default:
+                            {
+                                cout <<"Unsual error occured"<<endl<<endl;
+                                break;
+                            }
+                        }
+                        break;
+                    }
+                    case 5:
+                    {
+
+                        break;
+                    }
+                    default:
+                    {
+                        cout << "Unsual error occured" <<endl <<endl;
+                        break;
+                    }
+                }
+                break;
+            } 
+
+            case 1 :  // When original user type is professor
+            {
+
+                switch(option){
+                    case 1:
+                    {
+                        cout << "Enter new name : ";
+                        cin >> professor_list[indices[2]].name;
+                        cout << endl;
+                        user_list[indices[0]].name = professor_list[indices[2]].name;
+                        break;
+                    }
+                    case 2:
+                    {
+                        cout << "Enter new password : ";
+                        cin >> professor_list[indices[2]].password;
+                        cout << endl;
+                        user_list[indices[0]].password = professor_list[indices[2]].password;
+                        break;
+                    }
+                    case 3:
+                    {
+                        cout << "Enter new id : ";
+                        cin >> professor_list[indices[2]].id;
+                        cout << endl;
+                        user_list[indices[0]].id = professor_list[indices[2]].id;
+                        break;
+                    }
+                    case 4:
+                    {
+                        cout << "Enter new user type : ";
+                        cin >> user_list[indices[0]].type;
+                        cout << endl;
+                        switch(user_list[indices[0]].type){
+                            case 0:
+                            {
+                                professor professor_1 = professor_list[indices[2]];
+                                professor_list.erase(professor_list.begin()+indices[2]);
+                                student student_1;
+                                student_1.name = professor_1.name;
+                                student_1.password = professor_1.password;
+                                student_1.id = professor_1.id;     
+                                student_list.push_back(student_1);                           
+                                break;
+                            }
+                            case 1:
+                            {   
+
+                                break;
+                            }
+                            case 2:
+                            {
+                                professor professor_1 = professor_list[indices[2]];
+                                professor_list.erase(professor_list.begin()+indices[2]);
+                                librarian librarian_1;
+                                librarian_1.name = professor_1.name;
+                                librarian_1.password = professor_1.password;
+                                librarian_1.id = professor_1.id;    
+                                librarian_list.push_back(librarian_1);
+                                break;
+                            }
+                            default:
+                            {
+                                cout <<"Unsual error occured"<<endl<<endl;
+                                break;
+                            }
+                        }
+                        break;
+                    }
+                    case 5:
+                    {
+                        
+                        break;
+                    }
+                    default:
+                    {
+
+                        break;
+                    }
+                }     
+
+                break;
+            }
+
+            case 2 :    // When original user type is librarian
+            {
+
+                switch(option){
+                    case 1:
+                    {
+                        cout << "Enter new name : ";
+                        cin >> librarian_list[indices[2]].name;
+                        cout << endl;
+                        user_list[indices[0]].name = librarian_list[indices[2]].name;
+                        break;
+                    }
+                    case 2:
+                    {
+                        cout << "Enter new password : ";
+                        cin >> student_list[indices[1]].password;
+                        cout << endl;
+                        user_list[indices[0]].password = librarian_list[indices[2]].password;
+                        break;
+                    }
+                    case 3:
+                    {
+                        cout << "Enter new id : ";
+                        cin >> student_list[indices[1]].id;
+                        cout << endl;
+                        user_list[indices[0]].id = librarian_list[indices[2]].id;
+                        break;
+                    }
+                    case 4:
+                    {
+                        cout << "Enter new user type :";
+                        cin >> user_list[indices[0]].type;
+                        cout << endl;
+                        switch(user_list[indices[0]].type){
+                            case 0:
+                            {
+                                librarian librarian_1 = librarian_list[indices[2]];
+                                librarian_list.erase(librarian_list.begin()+indices[2]);
+                                student student_1;
+                                student_1.name = librarian_1.name;
+                                student_1.password = librarian_1.password;
+                                student_1.id = librarian_1.id;
+                                student_list.push_back(student_1);                                
+                                break;
+                            }
+                            case 1:
+                            {   
+                                librarian librarian_1 = librarian_list[indices[2]];
+                                librarian_list.erase(librarian_list.begin()+indices[2]);
+                                professor professor_1;
+                                professor_1.name = librarian_1.name;
+                                professor_1.password = librarian_1.password;
+                                professor_1.id = librarian_1.id;
+                                professor_list.push_back(professor_1);
+                                break;
+                            }
+                            case 2:
+                            {
+      
+                                break;
+                            }
+                            default:
+                            {
+                                cout <<"Unsual error occured"<<endl<<endl;
+                                break;
+                            }
+                        }
+                        break;
+                    }
+                    case 5:
+                    {
+                        
+                        break;
+                    }
+                    default:
+                    {
+                        cout <<"Unsual error occured"<<endl<<endl;
+                        break;
+                    }
+                }                
+                break;
+            }
+            default :
+            {
+                cout << "Unsual error occured." << endl;
+                break;
+            }
+        }
+
+    }
     return;
-}
+}  
 
 void user_database::display(){
     long long int n1,n2,n3,n4;
@@ -176,32 +452,9 @@ void user_database::display(){
         cout <<"No users in the database";
     }
     else{
+        cout << "The user database is as follows : "<<endl;
         for(long long int i= 0; i<n1;i++){
-            cout << "User Name : " << user_list[i].name<<endl;
-            cout << "User ID : " << user_list[i].id<<endl;
-            switch(user_list[i].type){
-                case 0 :
-                {
-                    cout << "User Type : Student"<<endl;
-                    break;
-                }
-                case 1 :
-                {
-                    cout << "User Type : Professor"<<endl;
-                    break;
-                }
-                case 2 :
-                {
-                    cout <<"User Type : Librarian"<<endl;
-                    break;
-                }
-                default :
-                {
-                    cout <<"Unusual error encountered"<<endl;
-                    break;
-                }
-            }
-            cout <<endl;
+            user_list[i].display();
         }
     }
     return;
