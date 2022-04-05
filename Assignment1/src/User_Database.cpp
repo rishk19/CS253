@@ -211,7 +211,10 @@ void user_database::update(){
                         break;
                     }
                     case 4:
-                    {
+                    {   
+                        cout << "User type 0 stands for student" << endl;
+                        cout << "User type 1 stands for professor" << endl;
+                        cout << "User type 2 stands for librarian" << endl;
                         cout << "Enter new user type :";
                         cin >> user_list[indices[0]].type;
                         cout << endl;
@@ -244,7 +247,7 @@ void user_database::update(){
                             }
                             default:
                             {
-                                cout <<"Unsual error occured"<<endl<<endl;
+                                cout <<"Wrong user type entered. "<<endl<<endl;
                                 break;
                             }
                         }
@@ -294,7 +297,10 @@ void user_database::update(){
                     }
                     case 4:
                     {
-                        cout << "Enter new user type : ";
+                        cout << "User type 0 stands for student"<<endl;
+                        cout << "User type 1 stands for professor"<<endl;
+                        cout << "User type 2 stands for librarian"<<endl;
+                        cout << "Enter new user type :";
                         cin >> user_list[indices[0]].type;
                         cout << endl;
                         switch(user_list[indices[0]].type){
@@ -327,7 +333,7 @@ void user_database::update(){
                             }
                             default:
                             {
-                                cout <<"Unsual error occured"<<endl<<endl;
+                                cout <<"Wrong user type entered"<<endl<<endl;
                                 break;
                             }
                         }
@@ -378,6 +384,9 @@ void user_database::update(){
                     }
                     case 4:
                     {
+                        cout << "User type 0 stands for student" << endl;
+                        cout << "User type 1 stands for professor" << endl;
+                        cout << "User type 2 stands for librarian" << endl;
                         cout << "Enter new user type :";
                         cin >> user_list[indices[0]].type;
                         cout << endl;
@@ -411,7 +420,7 @@ void user_database::update(){
                             }
                             default:
                             {
-                                cout <<"Unsual error occured"<<endl<<endl;
+                                cout <<"Wrong user type entered"<<endl<<endl;
                                 break;
                             }
                         }
@@ -424,7 +433,7 @@ void user_database::update(){
                     }
                     default:
                     {
-                        cout <<"Unsual error occured"<<endl<<endl;
+                        cout <<"Wrong option selected"<<endl<<endl;
                         break;
                     }
                 }                

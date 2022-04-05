@@ -1,15 +1,16 @@
 #include "Include/Initialization.h"
 #include "Include/User_Database.h"
+#include "Include/Login.h"
 #include <iostream>
 
 using namespace std;
 
 initialization::initialization(){
-    cout << " Welcome to the Library Management System !!" <<endl <<endl;
+    cout << "Welcome to the Library Management System !!" <<endl <<endl;
     user_database all_users;
-    cout << " Kindly Intialize the user database" <<endl <<endl;
-    int flag = 1;
-    while(flag){
+    cout << "Kindly Intialize the user database" <<endl <<endl;
+    int flag1 = 1;
+    while(flag1){
         cout << "Press 1 if you wish to add to the database" <<endl;
         cout << "Press 2 if you wish to delete an entry to the database" <<endl;
         cout << "Press 3 if you wish to update an entry to the database" <<endl ;
@@ -46,7 +47,9 @@ initialization::initialization(){
                 all_users.show_students();
                 all_users.show_professors();
                 all_users.show_librarians();
-                flag = 0;
+                flag1 = 0;
+                cout << endl;
+                login logging_in(&all_users);
                 break;
             }
 
@@ -56,5 +59,11 @@ initialization::initialization(){
                 break;
             }
         }
+    }
+
+    cout << "Kindly initialize the book database" << endl << endl;
+    int flag2 = 0;
+    while(flag2){
+
     }
 }

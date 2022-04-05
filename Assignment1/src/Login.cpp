@@ -16,7 +16,9 @@ login::login(user_database* all_users){
 
     cout << "Enter Password : ";
     string password;
+    cin.ignore();
     getline(cin, password);
+    cout <<endl;
 
     vector<long long int> indices = all_users->search(ID);
     if (indices[0]== -1){
@@ -25,7 +27,35 @@ login::login(user_database* all_users){
     else{
         user user_1 = all_users->user_list[indices[0]];
         if (user_1.password == password){
-            cout << "Welcome " << user_1.name << " !!" <<endl << endl;
+            switch(user_1.type){
+
+                case 0:
+                {
+                    student student_1 = all_users->student_list[indices[1]];
+                    student_menu(all_users, student_1);
+                    break;
+                }
+
+                case 1:
+                {
+                    professor professor_1 = all_users->professor_list[indices[2]];
+                    professor_menu(all_users, professor_1);
+                    break;
+                }
+
+                case 2:
+                {
+                    librarian librarian_1 = all_users->librarian_list[indices[3]];
+                    librarian_menu(all_users, librarian_1);
+                    break;
+                }
+
+                default :
+                {
+                    cout << "Unusual error occured !" <<endl <<endl;
+                    break;
+                }
+            }
         }
         else {
             cout << "Incorrect Password" <<endl << endl;
