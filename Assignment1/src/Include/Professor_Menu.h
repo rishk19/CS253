@@ -7,5 +7,5 @@ class professor_menu{
     public:
 
     // Functions
-    professor_menu(user_database* all_users, professor professor_1);
+    professor_menu(user_database* all_users, book_database* all_books, professor professor_1);
 };

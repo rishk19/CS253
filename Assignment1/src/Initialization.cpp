@@ -7,6 +7,7 @@
 using namespace std;
 
 initialization::initialization(){
+    cout <<endl;
     cout << "Welcome to the Library Management System !!" <<endl <<endl;
     user_database all_users;
     book_database all_books;
@@ -106,6 +107,33 @@ initialization::initialization(){
                 break;
             }
 
+        }
+    }
+
+    int flag3 = 1;
+    while(flag3){
+        cout << endl;
+        cout << "Press 0 if you want to close the application"<<endl;
+        cout << "Press 1 if you want to enter the login portal" <<endl <<endl;
+        cout << "Enter your option : ";
+        int option;
+        cin >> option;
+        switch(option){
+            case 0 :
+            {
+                flag3 = 0;
+                break;
+            }
+            case 1 :
+            {
+                login login_1(&all_users, &all_books);
+                break;
+            }
+            default :
+            {
+                cout << "Wrong option selected" <<endl; 
+                break;
+            }
         }
     }
 

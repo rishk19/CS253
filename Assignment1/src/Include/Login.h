@@ -6,5 +6,5 @@ class login{
     public :
     //user_database user_lists;
     //Functions
-    login(user_database* user_lists);
+    login(user_database* all_users, book_database* all_books);
 };

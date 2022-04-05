@@ -7,7 +7,7 @@
 #include <string>
 
 using namespace std;
-login::login(user_database* all_users){
+login::login(user_database* all_users, book_database* all_books){
     cout << "Welcome to the login portal" <<endl <<endl;
     cout << "Enter your ID : ";
     long long int ID;
@@ -32,21 +32,21 @@ login::login(user_database* all_users){
                 case 0:
                 {
                     student student_1 = all_users->student_list[indices[1]];
-                    student_menu(all_users, student_1);
+                    student_menu(all_users,all_books, student_1);
                     break;
                 }
 
                 case 1:
                 {
                     professor professor_1 = all_users->professor_list[indices[2]];
-                    professor_menu(all_users, professor_1);
+                    professor_menu(all_users,all_books, professor_1);
                     break;
                 }
 
                 case 2:
                 {
                     librarian librarian_1 = all_users->librarian_list[indices[3]];
-                    librarian_menu(all_users, librarian_1);
+                    librarian_menu(all_users,all_books, librarian_1);
                     break;
                 }
 

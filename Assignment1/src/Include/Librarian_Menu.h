@@ -7,5 +7,5 @@ class librarian_menu{
     public:
 
     // Functions
-    librarian_menu(user_database* all_users, librarian librarian_1);
+    librarian_menu(user_database* all_users,book_database* all_books, librarian librarian_1);
 };

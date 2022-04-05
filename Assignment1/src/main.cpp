@@ -8,6 +8,7 @@ using namespace std;
 int main(){
 
     initialization a;
+    cout <<endl << "The portal is closing !!" <<endl <<endl;
     //login loginscrenn;
     /*
     user_database all_users_list;
