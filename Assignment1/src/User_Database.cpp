@@ -442,11 +442,9 @@ void user_database::update(){
 }  
 
 void user_database::display(){
+
     long long int n1,n2,n3,n4;
     n1 = user_list.size();
-    n2 = student_list.size();
-    n3 = professor_list.size();
-    n4 = librarian_list.size();
 
     if(n1 == 0){
         cout <<"No users in the database";
@@ -459,3 +457,50 @@ void user_database::display(){
     }
     return;
 }
+
+void user_database::show_students(){
+    long long int n = student_list.size();
+
+    if(n==0){
+        cout <<endl<< "No students in the database" <<endl;
+    }
+    else{
+        cout << endl << "The student database is as follows : " <<endl;
+        for(long long int i =0; i<n ;i++){
+            student student_1 = student_list[i];
+            student_1.display();
+        }
+    }
+    return;
+}
+
+void user_database::show_professors(){
+    long long int n = professor_list.size();
+    if (n==0){
+        cout << endl << "No professors in the database" <<endl;
+    }
+    else{
+        cout << endl << "The professor database is as follows : " <<endl;
+        for(long long int i = 0; i<n;i++){
+            professor professor_1 = professor_list[i];
+            professor_1.display();
+        }
+    }
+    return;
+}
+
+void user_database::show_librarians(){
+    long long int n = librarian_list.size();
+    if(n==0){
+        cout << endl << "No librarians in the database" <<endl;
+    }
+    else{
+        cout << endl << "The librarian database is as follows : " <<endl;
+        for(long long int i = 0; i<n;i++){
+            librarian librarian_1 = librarian_list[i];
+            librarian_1.display();
+        }
+    }
+    return;
+}
+

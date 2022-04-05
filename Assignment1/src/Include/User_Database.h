@@ -18,6 +18,9 @@ class user_database{
     void remove();
     std::vector<long long int> search(long long int ID);
     void display();
+    void show_students();
+    void show_professors();
+    void show_librarians();
 
     //Friend Classes
     friend class librarian;
