@@ -1,5 +1,6 @@
 #pragma once
 #include<string>
+
 class user{
     public:
     std::string name;

@@ -8,6 +8,7 @@ class professor: public user{
     book_database issued_book_list;
     
     //Functions
+    void issue_book( book* book_1);
     void calculate_fines();
     void clear_fine_amount();
     professor();

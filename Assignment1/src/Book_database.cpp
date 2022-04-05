@@ -6,11 +6,13 @@ void book_database::add(void){
     book book_1;
 
     cout << "Enter Book Name: ";
-    cin >> book_1.title;
+    cin.ignore();
+    getline(cin ,book_1.title);
     cout << endl;
 
     cout << "Enter Book Author: ";
-    cin >> book_1.author;
+    cin.ignore();
+    getline(cin ,book_1.author);
     cout << endl;
 
     cout << "Enter Book ISBN: ";
@@ -18,7 +20,8 @@ void book_database::add(void){
     cout << endl;
 
     cout << "Enter Book Publication: ";
-    cin >> book_1.publication;
+    cin.ignore();
+    getline(cin ,book_1.publication);
     cout << endl;
 
     book_list.push_back(book_1);
@@ -51,6 +54,7 @@ void book_database::remove(){
     }
     return; 
 }
+
 void book_database::update(){
     cout << "Enter ISBN of the book : ";
     long long int ISBN_requested;
@@ -95,7 +99,7 @@ void book_database::update(){
                 cout << endl;
                 break;
             default:
-                cout << "Incorrect operation the process did not complete. Please try again !"<<endl;
+                cout << "Wrong option selected"<<endl;
                 break;
         }
         book_list[n] = book_1;
@@ -103,4 +107,11 @@ void book_database::update(){
         
     }
     return;
+}
+
+void book_database::display(){
+    long long int n = book_list.size();
+    for (long long int i = 0; i<n;i++){
+        book_list[i].display();
+    }
 }

@@ -8,6 +8,7 @@ class book_database{
     std::vector<book> book_list;
 
     //Functions
+    void display(void);
     void add(void);
     void update(void);
     void remove(void);
