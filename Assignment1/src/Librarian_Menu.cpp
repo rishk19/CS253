@@ -119,7 +119,7 @@ librarian_menu::librarian_menu(user_database* all_users, book_database* all_book
                                 cout << "Issuing the book : " << book_1 ->title <<endl;
                                 cout << "The issuer is : " << professor_1.name <<endl << endl;
                                 professor_1.issue_book(book_1);   
-                                all_users->professor_list[user_index[3]] = professor_1;                        
+                                all_users->professor_list[user_index[2]] = professor_1;                        
                                 break;
                             }
 
@@ -143,9 +143,90 @@ librarian_menu::librarian_menu(user_database* all_users, book_database* all_book
 
             case 8:
             {
+                cout << "You have entered the portal to return books issued by the user !" <<endl <<endl;
+                cout << "Enter User ID : ";
+                long long int requested_ID;
+                cin >> requested_ID;
+
+                vector<long long int> user_index = all_users->search(requested_ID);
+
+                
+                if(user_index[0] == -1){
+                    cout << "No such user found in the database." <<endl <<endl;
+                }
+                else{
+                    switch(all_users->user_list[user_index[0]].type){
+                        case 0:
+                        {
+                            cout << "The books issued by the user are : "<<endl <<endl;
+                            all_users->student_list[user_index[1]].issued_book_list.display();
+                            break;
+                        }
+
+                        case 1:
+                        {
+                            cout << "The books issued by the user are : "<<endl <<endl;
+                            all_users->professor_list[user_index[2]].issued_book_list.display();
+                            break;
+                        }
+
+                        case 2:
+                            cout << "Librarians can't issue books !!" <<endl <<endl;
+
+                    }
+                    if(all_users->user_list[user_index[0]].type){
+                        cout << "Enter Book ISBN : ";
+                        long long int requested_ISBN;
+                        cin >> requested_ISBN;
+                        long long int book_index = all_books->search(requested_ISBN);
+                        if(book_index == -1){
+                            cout << "No such book found in the database. " <<endl <<endl;
+                        }
+                        else{
+                            cout << "The user is : " <<endl<<endl;
+                            all_users->user_list[user_index[0]].display();
+                            int type = all_users->user_list[user_index[0]].type;
+                            book* book_1 = &(all_books->book_list[book_index]);
+                            switch(type){
+                                case 0:
+                                {
+                                    student student_1 = all_users->student_list[user_index[1]];   
+                                    cout << "Returning the book : " << book_1 -> title <<endl;
+                                    student_1.return_book(book_1);
+                                    all_users->student_list[user_index[1]] = student_1;
+
+
+                                    break;
+                                }
+
+                                case 1:
+                                {
+                                    professor professor_1 = all_users->professor_list[user_index[2]];
+                                    cout << "Returning the book : " << book_1 ->title <<endl;
+                                    professor_1.issue_book(book_1);   
+                                    all_users->professor_list[user_index[2]] = professor_1;                        
+                                    break;
+                                }
+
+                                case 2:
+                                {
+                                    cout << "Librarians cant issue or return book ! Process terminated" <<endl <<endl;
+                                    break;
+                                }
+
+                                default:
+                                {
+                                    cout << "Unsual error occured !" <<endl <<endl;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                }
 
                 break;
             }
+
 
             case 9:
             {

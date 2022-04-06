@@ -4,7 +4,7 @@
 #include "User.h"
 class student: public user{
     public:
-    long long int fine_amount;
+    //long long int fine_amount;
     book_database issued_book_list;
     int fine_per_day;
     int issue_length;

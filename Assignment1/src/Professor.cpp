@@ -77,3 +77,16 @@ void professor::calculate_fines(){
     }
 
 }
+
+void professor::return_book(book* book_1){
+    long long int requested_ISBN = book_1->ISBN;
+    long long int index = issued_book_list.search(requested_ISBN);
+    if (index == -1){
+        cout << "No such book has been issued by the user "<<endl <<endl;
+    }
+
+    else{
+        book_1 ->issue_status = 0;
+        issued_book_list.book_list.erase(issued_book_list.book_list.begin() + index);
+    }
+}

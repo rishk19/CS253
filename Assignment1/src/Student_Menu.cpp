@@ -54,7 +54,7 @@ student_menu :: student_menu(user_database* all_users, book_database* all_books,
 
             case 4:
             {
-                cout << "Option under construction " <<endl <<endl;
+                student_1.calculate_fines();
                 break;
             }
 

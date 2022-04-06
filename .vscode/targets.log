@@ -8,7 +8,7 @@ D:\GnuWin32\bin\make.exe all --print-data-base --no-builtin-variables --no-built
 # This program built for i386-pc-mingw32
  
 
-# Make data base, printed on Wed Apr 06 15:07:32 2022
+# Make data base, printed on Wed Apr 06 19:08:16 2022
 
 # Variables
 
@@ -37,7 +37,8 @@ SHELL := sh.exe
 # environment
 WINDIR = C:\WINDOWS
 # environment
-VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+VSCODE 
+_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
 VBOX_MSI_INSTALL_PATH = D:\Oracle\VirtualBox\
 # environment
@@ -55,7 +56,7 @@ PROGRAMW6432 = C:\Program Files
 # environment
 PROGRAMDATA = C:\ProgramData
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-29fd9060-1625-4962-8e22-c51ec0e0866a-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-88548591-8491-4fe6-a90f-934c09d69e78-sock
 # environment
 VSCODE_CWD = D:\Microsoft VS Code
 # environment
@@ -73,7 +74,8 @@ USERPROFILE = C:\Users\RISHABH
 # environment
 ALLUSERSPROFILE = C:\ProgramData
 # environment
-VSCODE_LOG_STACK = false
+VSCODE_LOG_STACK = fal 
+se
 # environment
 NUMBER_OF_PROCESSORS = 8
 # environment
@@ -83,7 +85,7 @@ ELECTRON_RUN_AS_NODE = 1
 # automatic
 %F = $(notdir $%)
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_46944_AOZJJDQCMUNAKJER
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_4180_GGZZGHZXVFZOTHOY
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -93,7 +95,8 @@ PROGRAMFILES = C:\Program Files (x86)
 # environment
 DRIVERDATA = C:\Windows\System32\Drivers\DriverData
 # environment
-ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+ORIGINAL_XDG_CURRENT_DE 
+SKTOP = undefined
 # environment
 USERNAME = RISHABH
 # environment
@@ -109,7 +112,8 @@ COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
 # environment
 LOGONSERVER = \\R-KOTHARI
 # environment
-ONEDRIVECONSUMER = C:\Users\RISHABH\OneDrive
+ONEDRIVECONSUMER = C:\User 
+s\RISHABH\OneDrive
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # environment
@@ -131,7 +135,8 @@ PROGRAMFILES(X86) = C:\Program Files (x86)
 # environment
 LOCALAPPDATA = C:\Users\RISHABH\AppData\Local
 # environment
-PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;"C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules;C:\Program Files (x86)\Dev-Cpp\MinGW64\bin";
+PSMODULEPATH = C:\Program Files\Window 
+sPowerShell\Modules;"C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules;C:\Program Files (x86)\Dev-Cpp\MinGW64\bin";
 # default
 MAKE_COMMAND := D:/GnuWin32/bin/make
 # environment
@@ -147,7 +152,8 @@ OS = Windows_NT
 # environment
 VSCODE_IPC_HOOK = \\.\pipe\3fce6a2c548a4e1fd035f88de8d148bd-1.66.0-main-sock
 # environment
-HOMEPATH = \Users\RISHABH
+HOMEPATH = \Users\RISHA 
+BH
 # environment
 COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
 # environment
@@ -172,6 +178,7 @@ COMSPEC = C:\WINDOWS\system32\cmd.exe
 MAKEFILES := 
 # automatic
 <F = $(notdir $<)
+ 
 # environment
 LC_ALL = C
 # environment
@@ -195,11 +202,12 @@ LANG = C
 # environment
 PROCESSOR_LEVEL = 6
 # environment
-VSCODE_PID = 46944
+VSCODE_PID = 4180
 # environment
 USERDOMAIN_ROAMINGPROFILE = R-KOTHARI
 # variable set hash-table stats:
-# Load=93/1024=9%, Rehash=0, Collisions=9/111=8%
+# Lo 
+ad=93/1024=9%, Rehash=0, Collisions=9/111=8%
 
 # Pattern-specific Variable Values
 
@@ -212,38 +220,43 @@ USERDOMAIN_ROAMINGPROFILE = R-KOTHARI
 # C:\Users\RISHABH\CS771_IITK: could not be stat'd.
 # C:\Program Files (x86)\Lua\5.1: could not be stat'd.
 # C:\Users\RISHABH\Desktop\bin: could not be stat'd.
+ 
 # C:\WINDOWS\System32\WindowsPowerShell\v1.0\ (key C:/WINDOWS/System32/WindowsPowerShell/v1.0/, mtime 1615227296): 30 files, no impossibilities.
 # C:\WINDOWS\System32\Wbem (key C:/WINDOWS/System32/Wbem, mtime 1647363099): 156 files, no impossibilities.
 # . (key d:/CS253, mtime 1648803380): 6 files, no impossibilities.
 # C:\Program Files\dotnet\ (key C:/Program Files/dotnet/, mtime 1649162875): 8 files, no impossibilities.
 # C:\TDM-GCC-64\bin: could not be stat'd.
-# D:\Microsoft VS Code\bin (key D:/Microsoft VS Code/bin, mtime 1648804013): 4 files, no impossibilities.
+# D:\Microsoft VS Code\bin (key D:/Microsoft 
+ VS Code/bin, mtime 1648804013): 4 files, no impossibilities.
 # D:\GnuWin32\bin (key D:/GnuWin32/bin, mtime 1647477737): 5 files, no impossibilities.
 # C:\Users\RISHABH\AppData\Local\GitHubDesktop\bin (key C:/Users/RISHABH/AppData/Local/GitHubDesktop/bin, mtime 1612292574): 4 files, no impossibilities.
 # C:\Users\RISHABH\AppData\Local\Microsoft\WindowsApps (key C:/Users/RISHABH/AppData/Local/Microsoft/WindowsApps, mtime 1648061419): 26 files, no impossibilities.
-# C:\WINDOWS\System32\OpenSSH\: could not b 
-e stat'd.
+# C:\WINDOWS\System32\OpenSSH\: could not be  
+stat'd.
 # C:\Program Files (x86)\KLatexFormula-4.1.0\bin (key C:/Program Files (x86)/KLatexFormula-4.1.0/bin, mtime 1605870373): 21 files, no impossibilities.
 # D:\Strawberry\c\bin (key D:/Strawberry/c/bin, mtime 1648749186): 115 files, no impossibilities.
 # C:\Program Files\Intel\Intel(R) Management Engine Components\DAL (key C:/Program Files/Intel/Intel(R) Management Engine Components/DAL, mtime 1638347071): 4 files, no impossibilities.
-# C:\WINDOWS (key C:/WINDOWS, mtime 1647446209): 136 files, no impossibilities.
+# C:\WINDOWS (key C:/WINDOWS, mtime 1647446209): 136 files, no imposs 
+ibilities.
 # D:\Strawberry\perl\bin (key D:/Strawberry/perl/bin, mtime 1648749244): 184 files, no impossibilities.
 # C:\cygwin64\bin: could not be stat'd.
 # D:\Strawberry\perl\site\bin (key D:/Strawberry/perl/site/bin, mtime 1648749178): 2 files, no impossibilities.
 # C:\Program Files\Microsoft SQL Server\120\Tools\Binn\ (key C:/Program Files/Microsoft SQL Server/120/Tools/Binn/, mtime 1559754678): 4 files, no impossibilities.
-# D:\mingw-w64\mingw64\lib (key D:/mingw-w64/mingw64/lib, mtime 1648921283): 37 files, no impossibilities.
+# D:\mingw-w64\mingw64\lib (key D:/mingw-w64/mingw64/lib, mtime 1648921283): 37 f 
+iles, no impossibilities.
 # C:\msys64\mingw64\bin: could not be stat'd.
 # C:\iverilog\gtkwave\bin (key C:/iverilog/gtkwave/bin, mtime 1610514464): 52 files, no impossibilities.
 # C:\Program Files\Git\cmd (key C:/Program Files/Git/cmd, mtime 1612293747): 8 files, no impossibilities.
 # C:\WINDOWS\system32 (key C:/WINDOWS/system32, mtime 1648310491): 3106 files, no impossibilities.
 # C:\Program Files\Git LFS (key C:/Program Files/Git LFS, mtime 1647784180): 5 files, no impossibilities.
-# C:\Program Files (x86)\Dev-Cpp\MinGW64\bin: could not be stat'd.
+# C:\Program Files (x86) 
+\Dev-Cpp\MinGW64\bin: could not be stat'd.
 # D:\Qt\6.2.4\mingw_64\bin (key D:/Qt/6.2.4/mingw_64/bin, mtime 1647874405): 109 files, no impossibilities.
 # C:\Program Files\CMake\bin (key C:/Program Files/CMake/bin, mtime 1647253379): 7 files, no impossibilities.
 # C:\Program Files (x86)\Lua\5.1\clibs: could not be stat'd.
 # C:\iverilog\bin (key C:/iverilog/bin, mtime 1610514461): 13 files, no impossibilities.
-# C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL (key C:/Program Files (x86 
-)/Intel/Intel(R) Management Engine Components/DAL, mtime 1638347071): 7 files, no impossibilities.
+# C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL (key C:/Program Files (x86)/ 
+Intel/Intel(R) Management Engine Components/DAL, mtime 1638347071): 7 files, no impossibilities.
 
 # 4244 files, no impossibilities in 35 directories.
 
@@ -265,8 +278,8 @@ all:
 # Not a target:
 .DEFAULT:
 #  Implicit rule search has not been done.
-#  Modification time neve 
-r checked.
+#  Modification time never  
+checked.
 #  File has not been updated.
 
 # Not a target:
@@ -287,8 +300,8 @@ makefile:
 
 # Not a target:
 GNUmakefile:
-#  A default, MAKEFILES, or -i 
-nclude/sinclude makefile.
+#  A default, MAKEFILES, or -inc 
+lude/sinclude makefile.
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has been updated.
@@ -307,11 +320,11 @@ nclude/sinclude makefile.
 # # of strings in strcache: 0
 # # of strcache buffers: 0
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
-# strcac 
+# strcache 
 make: *** No rule to make target `all'.  Stop.
 
-he free: total = 0 / max = 0 / min = 4096 / avg = 0
+ free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Wed Apr 06 15:07:32 2022
+# Finished Make data base on Wed Apr 06 19:08:16 2022
 
  

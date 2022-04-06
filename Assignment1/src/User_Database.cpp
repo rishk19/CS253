@@ -20,7 +20,7 @@ void user_database::add(){
 
     cout << "Enter 0 if user is student" <<endl;
     cout << "Enter 1 if user is professor" <<endl;
-    cout << "Enter 2 if user is librarian" <<endl;
+    cout << "Enter 2 if user is librarian" <<endl<<endl;
 
     int i;
     cout << "Enter your option : ";

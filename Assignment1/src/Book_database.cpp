@@ -7,12 +7,12 @@ void book_database::add(void){
 
     cout << "Enter Book Name: ";
     cin.ignore();
-    getline(cin ,book_1.title);
+    getline(cin>>ws ,book_1.title);
     cout << endl;
 
     cout << "Enter Book Author: ";
-    cin.ignore();
-    getline(cin ,book_1.author);
+    //cin.ignore();
+    getline(cin>>ws ,book_1.author);
     cout << endl;
 
     cout << "Enter Book ISBN: ";
@@ -21,7 +21,7 @@ void book_database::add(void){
 
     cout << "Enter Book Publication: ";
     cin.ignore();
-    getline(cin ,book_1.publication);
+    getline(cin>>ws ,book_1.publication);
     cout << endl;
 
     book_list.push_back(book_1);
