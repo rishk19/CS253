@@ -21,155 +21,165 @@ librarian_menu::librarian_menu(user_database* all_users, book_database* all_book
         cout <<"Press 11 if you wish to see the entire professor list"<<endl;
         cout <<"Press 12 if you wish to see the entie librarian list" <<endl;
         cout <<"Press 13 if you wish to logout" <<endl<<endl;
-    }
-    cout <<"Enter your option : ";
-    int option;
-    cin >> option;
-    cout <<endl;
-    switch(option){
-        case 1:
-        {
-            cout << "You have entered the portal to add books to the database!" <<endl<<endl;
-            all_books->add();
-            break;
-        }
-
-        case 2:
-        {
-            cout <<"You have entered the portal to remove books from the database !" <<endl <<endl;
-            all_books->remove();
-            break;
-        }
-
-        case 3:
-        {
-            cout <<"You have entered the portal to update books from the database !" <<endl <<endl;
-            all_books->update();
-            break;
-        }
-
-        case 4:
-        {
-            cout <<"You have entered the portal to add users to the database !"<<endl <<endl;
-            all_users->add();
-            break;
-        }
-
-        case 5:
-        {
-            cout << "You have entered the portal to remove users from the database !" <<endl <<endl;
-            all_users->remove();
-            break;
-        }
-
-        case 6:
-        {
-            cout << "You have entered the portal to update users from the database !" <<endl <<endl;
-            all_users->update();
-            break;
-        }
-
-        case 7:
-        {
-            cout << "You have entered the portal to issue books to the user from the database !" <<endl <<endl;
-            cout << "Enter User ID : ";
-            long long int requested_ID;
-            cin >> requested_ID;
-            cout <<endl;
-            vector<long long int> user_index = all_users->search(requested_ID);
-
-            cout << "Enter Book ISBN : ";
-            long long int requested_ISBN;
-            cin >> requested_ISBN;
-            cout <<endl;
-            long long int book_index = all_books->search(requested_ISBN);
-
-            if(user_index[0] == -1){
-                cout << "No such user found in the database." <<endl <<endl;
+        cout <<"Enter your option : ";
+        int option;
+        cin >> option;
+        cout <<endl;
+        switch(option){
+            case 1:
+            {
+                cout << "You have entered the portal to add books to the database!" <<endl<<endl;
+                all_books->add();
+                break;
             }
-            else{
-                if(book_index == -1){
-                    cout << "No such book found in the database. " <<endl <<endl;
+
+            case 2:
+            {
+                cout <<"You have entered the portal to remove books from the database !" <<endl <<endl;
+                all_books->remove();
+                break;
+            }
+
+            case 3:
+            {
+                cout <<"You have entered the portal to update books from the database !" <<endl <<endl;
+                all_books->update();
+                break;
+            }
+
+            case 4:
+            {
+                cout <<"You have entered the portal to add users to the database !"<<endl <<endl;
+                all_users->add();
+                break;
+            }
+
+            case 5:
+            {
+                cout << "You have entered the portal to remove users from the database !" <<endl <<endl;
+                all_users->remove();
+                break;
+            }
+
+            case 6:
+            {
+                cout << "You have entered the portal to update users from the database !" <<endl <<endl;
+                all_users->update();
+                break;
+            }
+
+            case 7:
+            {
+                cout << "You have entered the portal to issue books to the user from the database !" <<endl <<endl;
+                cout << "Enter User ID : ";
+                long long int requested_ID;
+                cin >> requested_ID;
+                cout <<endl;
+                vector<long long int> user_index = all_users->search(requested_ID);
+
+                cout << "Enter Book ISBN : ";
+                long long int requested_ISBN;
+                cin >> requested_ISBN;
+                cout <<endl;
+                long long int book_index = all_books->search(requested_ISBN);
+
+                if(user_index[0] == -1){
+                    cout << "No such user found in the database." <<endl <<endl;
                 }
                 else{
-                    int type = all_users->user_list[user_index[0]].type;
-                    switch(type){
-                        case 0:
-                        {
+                    if(book_index == -1){
+                        cout << "No such book found in the database. " <<endl <<endl;
+                    }
+                    else{
+                        int type = all_users->user_list[user_index[0]].type;
+                        book* book_1 = &(all_books->book_list[book_index]);
+                        switch(type){
+                            case 0:
+                            {
+                                student student_1 = all_users->student_list[user_index[1]];
+                                cout << "Issuing the book : " << book_1 ->title <<endl;
+                                cout << "The issuer is : " << student_1.name <<endl <<endl;
+                                student_1.issue_book(book_1);
+                                all_users->student_list[user_index[1]] = student_1;
 
-                            break;
-                        }
+                                break;
+                            }
 
-                        case 1:
-                        {
+                            case 1:
+                            {
+                                professor professor_1 = all_users->professor_list[user_index[2]];
+                                cout << "Issuing the book : " << book_1 ->title <<endl;
+                                cout << "The issuer is : " << professor_1.name <<endl << endl;
+                                professor_1.issue_book(book_1);   
+                                all_users->professor_list[user_index[3]] = professor_1;                        
+                                break;
+                            }
 
-                            break;
-                        }
+                            case 2:
+                            {
+                                cout << "Librarians cant issue book ! Process terminated" <<endl <<endl;
+                                break;
+                            }
 
-                        case 2:
-                        {
-
-                            break;
-                        }
-
-                        default:
-                        {
-                            cout << "Unsual error occured !" <<endl <<endl;
-                            break;
+                            default:
+                            {
+                                cout << "Unsual error occured !" <<endl <<endl;
+                                break;
+                            }
                         }
                     }
                 }
+
+                break;
             }
 
-            break;
-        }
+            case 8:
+            {
+                cout <<"You have entered the portal to see the entire user list !" <<endl<<endl;
+                all_users->display();
+                break;
+            }
 
-        case 8:
-        {
-            cout <<"You have entered the portal to see the entire user list !" <<endl<<endl;
-            all_users->display();
-            break;
-        }
+            case 9:
+            {
+                cout <<"You have entered the portal to see the entire book list !" <<endl<<endl;
+                all_books->display();
+                break;
+            }
 
-        case 9:
-        {
-            cout <<"You have entered the portal to see the entire book list !" <<endl<<endl;
-            all_books->display();
-            break;
-        }
+            case 10:
+            {
+                cout <<"You have entered the portal to see the entire student list !" <<endl<<endl;
+                all_users->show_students();
+                break;
+            }
 
-        case 10:
-        {
-            cout <<"You have entered the portal to see the entire student list !" <<endl<<endl;
-            all_users->show_students();
-            break;
-        }
+            case 11:
+            {
+                cout <<"You have entered the portal to see the entire professor list !" <<endl<<endl;
+                all_users-> show_professors();
+                break;
+            }
+            
+            case 12:
+            {
+                cout << "You have entered the portal to see the entire librarian list !" <<endl <<endl;
+                all_users-> show_librarians();
+                break;
+            }
 
-        case 11:
-        {
-            cout <<"You have entered the portal to see the entire professor list !" <<endl<<endl;
-            all_users-> show_professors();
-            break;
-        }
-        
-        case 12:
-        {
-            cout << "You have entered the portal to see the entire librarian list !" <<endl <<endl;
-            all_users-> show_librarians();
-            break;
-        }
+            case 13:
+            {
+                flag = 0;
+                cout << endl << "Logging out !!" <<endl;
+                break;
+            }
 
-        case 13:
-        {
-            flag = 0;
-            cout << endl << "Logging out !!" <<endl;
-            break;
-        }
-
-        default:
-        {
-            cout << endl << "Wrong option enter" <<endl <<endl;
-            break;
+            default:
+            {
+                cout << endl << "Wrong option enter" <<endl <<endl;
+                break;
+            }
         }
     }
 

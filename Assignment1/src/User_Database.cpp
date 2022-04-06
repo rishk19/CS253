@@ -333,6 +333,7 @@ void user_database::display(){
         cout << "The user database is as follows : "<<endl;
         for(long long int i= 0; i<n1;i++){
             user_list[i].display();
+            cout <<endl;
         }
     }
     return;
@@ -349,6 +350,7 @@ void user_database::show_students(){
         for(long long int i =0; i<n ;i++){
             student student_1 = student_list[i];
             student_1.display();
+            cout <<endl;
         }
     }
     return;
@@ -364,6 +366,7 @@ void user_database::show_professors(){
         for(long long int i = 0; i<n;i++){
             professor professor_1 = professor_list[i];
             professor_1.display();
+            cout <<endl;
         }
     }
     return;

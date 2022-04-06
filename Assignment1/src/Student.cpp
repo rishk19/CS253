@@ -8,7 +8,6 @@ student::student(){
 }
 
 void student::issue_book(book* book_1){
-    cout << endl;
     int issue_month,issue_date,issue_year;
 
     cout << "Enter today's month in numeric : "; 
@@ -78,11 +77,11 @@ void student::issue_book(book* book_1){
 
     }
 
-
     issued_book_list.book_list.push_back(*book_1);
     book_1->issue_date = issue_date;
     book_1->issue_month = issue_month;
     book_1-> issue_year = issue_year;
+    cout << "The book has been issued successfully !" <<endl<<endl;
 
     book_1 -> issue_status = 1;
     return;

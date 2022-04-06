@@ -30,7 +30,7 @@ student_menu :: student_menu(user_database* all_users, book_database* all_books,
             {   
                 long long int n = student_1.issued_book_list.book_list.size();
                 if (n > 0){
-                cout << endl <<"Your issued book list is : "<<endl <<endl;
+                cout << endl <<"Your issued book list is : "<<endl;
                 student_1.issued_book_list.display();
                 }
                 else{
