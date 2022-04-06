@@ -15,12 +15,13 @@ librarian_menu::librarian_menu(user_database* all_users, book_database* all_book
         cout <<"Press 5 if you wish to remove a user from the user database"<<endl;
         cout <<"Press 6 if you wish to update a user from the user database" <<endl;
         cout <<"Press 7 if you wish to issue a book to a user" <<endl;
-        cout <<"Press 8 if you wish to see the entire user list" <<endl;
-        cout <<"Press 9 if you wish to see the entire book list" <<endl;
-        cout <<"Press 10 if you wish to see the entire student list"<<endl;
-        cout <<"Press 11 if you wish to see the entire professor list"<<endl;
-        cout <<"Press 12 if you wish to see the entie librarian list" <<endl;
-        cout <<"Press 13 if you wish to logout" <<endl<<endl;
+        cout <<"Press 8 if you wish to initiate a return of the book by a user" <<endl;
+        cout <<"Press 9 if you wish to see the entire user list" <<endl;
+        cout <<"Press 10 if you wish to see the entire book list" <<endl;
+        cout <<"Press 11 if you wish to see the entire student list"<<endl;
+        cout <<"Press 12 if you wish to see the entire professor list"<<endl;
+        cout <<"Press 13 if you wish to see the entie librarian list" <<endl;
+        cout <<"Press 14 if you wish to logout" <<endl<<endl;
         cout <<"Enter your option : ";
         int option;
         cin >> option;
@@ -97,10 +98,17 @@ librarian_menu::librarian_menu(user_database* all_users, book_database* all_book
                             case 0:
                             {
                                 student student_1 = all_users->student_list[user_index[1]];
-                                cout << "Issuing the book : " << book_1 ->title <<endl;
-                                cout << "The issuer is : " << student_1.name <<endl <<endl;
-                                student_1.issue_book(book_1);
-                                all_users->student_list[user_index[1]] = student_1;
+                                int n = student_1.issued_book_list.book_list.size();
+                                if (n < student_1.max_issues_allowed){
+                                    cout << "Issuing the book : " << book_1 ->title <<endl;
+                                    cout << "The issuer is : " << student_1.name <<endl <<endl;
+                                    student_1.issue_book(book_1);
+                                    all_users->student_list[user_index[1]] = student_1;
+                                }
+
+                                else{
+                                    cout << "You have already issued " << student_1.max_issues_allowed << " ! You have reached your limit" <<endl<<endl;
+                                }
 
                                 break;
                             }
@@ -135,40 +143,46 @@ librarian_menu::librarian_menu(user_database* all_users, book_database* all_book
 
             case 8:
             {
+
+                break;
+            }
+
+            case 9:
+            {
                 cout <<"You have entered the portal to see the entire user list !" <<endl<<endl;
                 all_users->display();
                 break;
             }
 
-            case 9:
+            case 10:
             {
                 cout <<"You have entered the portal to see the entire book list !" <<endl<<endl;
                 all_books->display();
                 break;
             }
 
-            case 10:
+            case 11:
             {
                 cout <<"You have entered the portal to see the entire student list !" <<endl<<endl;
                 all_users->show_students();
                 break;
             }
 
-            case 11:
+            case 12:
             {
                 cout <<"You have entered the portal to see the entire professor list !" <<endl<<endl;
                 all_users-> show_professors();
                 break;
             }
             
-            case 12:
+            case 13:
             {
                 cout << "You have entered the portal to see the entire librarian list !" <<endl <<endl;
                 all_users-> show_librarians();
                 break;
             }
 
-            case 13:
+            case 14:
             {
                 flag = 0;
                 cout << endl << "Logging out !!" <<endl;
