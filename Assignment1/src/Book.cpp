@@ -18,10 +18,10 @@ void book::display(){
 
 void book::book_request(){
     if (issue_status == 0){
-        cout << "The book is available for issue";
+        cout << "The book is available for issue" <<endl<<endl;
     }
     else{
-        cout << "The book is unavaialable for issue";
+        cout << "The book is unavaialable for issue"<<endl<<endl;
     }
 }
 

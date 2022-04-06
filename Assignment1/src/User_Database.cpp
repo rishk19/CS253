@@ -175,8 +175,8 @@ void user_database::update(){
         cout << "Press 1 if you want to change user name"<<endl;
         cout << "Press 2 if you want to change user password" << endl;
         cout << "Press 3 if you want to change user id" << endl;
-        cout << "Press 4 if you want to change user type" <<endl;
-        cout << "Press 5 if you dont want to change anything"<<endl;
+        //cout << "Press 4 if you want to change user type" <<endl;
+        cout << "Press 4 if you dont want to change anything"<<endl;
         cout << "Enter your option"<<endl;
 
         int option;
@@ -211,49 +211,6 @@ void user_database::update(){
                         break;
                     }
                     case 4:
-                    {   
-                        cout << "User type 0 stands for student" << endl;
-                        cout << "User type 1 stands for professor" << endl;
-                        cout << "User type 2 stands for librarian" << endl;
-                        cout << "Enter new user type :";
-                        cin >> user_list[indices[0]].type;
-                        cout << endl;
-                        switch(user_list[indices[0]].type){
-                            case 0:
-                            {
-                                break;
-                            }
-                            case 1:
-                            {   
-                                student student_1 = student_list[indices[1]];
-                                student_list.erase(student_list.begin()+indices[1]);
-                                professor professor_1;
-                                professor_1.name = student_1.name;
-                                professor_1.password = student_1.password;
-                                professor_1.id = student_1.id;
-                                professor_list.push_back(professor_1);
-                                break;
-                            }
-                            case 2:
-                            {
-                                student student_1 = student_list[indices[1]];
-                                student_list.erase(student_list.begin()+indices[1]);
-                                librarian librarian_1;
-                                librarian_1.name = student_1.name;
-                                librarian_1.password = student_1.password;
-                                librarian_1.id = student_1.id;
-                                librarian_list.push_back(librarian_1);
-                                break;
-                            }
-                            default:
-                            {
-                                cout <<"Wrong user type entered. "<<endl<<endl;
-                                break;
-                            }
-                        }
-                        break;
-                    }
-                    case 5:
                     {
 
                         break;
@@ -295,50 +252,7 @@ void user_database::update(){
                         user_list[indices[0]].id = professor_list[indices[2]].id;
                         break;
                     }
-                    case 4:
-                    {
-                        cout << "User type 0 stands for student"<<endl;
-                        cout << "User type 1 stands for professor"<<endl;
-                        cout << "User type 2 stands for librarian"<<endl;
-                        cout << "Enter new user type :";
-                        cin >> user_list[indices[0]].type;
-                        cout << endl;
-                        switch(user_list[indices[0]].type){
-                            case 0:
-                            {
-                                professor professor_1 = professor_list[indices[2]];
-                                professor_list.erase(professor_list.begin()+indices[2]);
-                                student student_1;
-                                student_1.name = professor_1.name;
-                                student_1.password = professor_1.password;
-                                student_1.id = professor_1.id;     
-                                student_list.push_back(student_1);                           
-                                break;
-                            }
-                            case 1:
-                            {   
-
-                                break;
-                            }
-                            case 2:
-                            {
-                                professor professor_1 = professor_list[indices[2]];
-                                professor_list.erase(professor_list.begin()+indices[2]);
-                                librarian librarian_1;
-                                librarian_1.name = professor_1.name;
-                                librarian_1.password = professor_1.password;
-                                librarian_1.id = professor_1.id;    
-                                librarian_list.push_back(librarian_1);
-                                break;
-                            }
-                            default:
-                            {
-                                cout <<"Wrong user type entered"<<endl<<endl;
-                                break;
-                            }
-                        }
-                        break;
-                    }
+                    
                     case 5:
                     {
                         
@@ -382,51 +296,8 @@ void user_database::update(){
                         user_list[indices[0]].id = librarian_list[indices[2]].id;
                         break;
                     }
-                    case 4:
-                    {
-                        cout << "User type 0 stands for student" << endl;
-                        cout << "User type 1 stands for professor" << endl;
-                        cout << "User type 2 stands for librarian" << endl;
-                        cout << "Enter new user type :";
-                        cin >> user_list[indices[0]].type;
-                        cout << endl;
-                        switch(user_list[indices[0]].type){
-                            case 0:
-                            {
-                                librarian librarian_1 = librarian_list[indices[2]];
-                                librarian_list.erase(librarian_list.begin()+indices[2]);
-                                student student_1;
-                                student_1.name = librarian_1.name;
-                                student_1.password = librarian_1.password;
-                                student_1.id = librarian_1.id;
-                                student_list.push_back(student_1);                                
-                                break;
-                            }
-                            case 1:
-                            {   
-                                librarian librarian_1 = librarian_list[indices[2]];
-                                librarian_list.erase(librarian_list.begin()+indices[2]);
-                                professor professor_1;
-                                professor_1.name = librarian_1.name;
-                                professor_1.password = librarian_1.password;
-                                professor_1.id = librarian_1.id;
-                                professor_list.push_back(professor_1);
-                                break;
-                            }
-                            case 2:
-                            {
-      
-                                break;
-                            }
-                            default:
-                            {
-                                cout <<"Wrong user type entered"<<endl<<endl;
-                                break;
-                            }
-                        }
-                        break;
-                    }
-                    case 5:
+                
+                    case 4: 
                     {
                         
                         break;

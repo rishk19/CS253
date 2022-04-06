@@ -8,7 +8,7 @@ D:\GnuWin32\bin\make.exe all --print-data-base --no-builtin-variables --no-built
 # This program built for i386-pc-mingw32
  
 
-# Make data base, printed on Tue Apr 05 23:26:04 2022
+# Make data base, printed on Wed Apr 06 09:36:35 2022
 
 # Variables
 
@@ -56,7 +56,7 @@ PROGRAMW6432 = C:\Program Files
 # environment
 PROGRAMDATA = C:\ProgramData
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-97e7eeb9-f7b7-4593-aeaa-d41a69be667c-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-db9fb8df-427a-48c0-a7c1-e699b036d93c-sock
 # environment
 VSCODE_CWD = D:\Microsoft VS Code
 # environment
@@ -85,7 +85,7 @@ ELECTRON_RUN_AS_NODE = 1
 # automatic
 %F = $(notdir $%)
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_25852_SCTHXDWGWTOCKQXN
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_34688_ZSXOZLIXVLMYXIIW
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -95,8 +95,7 @@ PROGRAMFILES = C:\Program Files (x86)
 # environment
 DRIVERDATA = C:\Windows\System32\Drivers\DriverData
 # environment
-ORIGINAL_XDG_CURRENT_D 
-ESKTOP = undefined
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
 USERNAME = RISHABH
 # environment
@@ -112,7 +111,8 @@ COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
 # environment
 LOGONSERVER = \\R-KOTHARI
 # environment
-ONEDRIVECONSUMER = C:\Users\RISHABH\OneDrive
+ONEDRIVECONSUMER = C:\Use 
+rs\RISHABH\OneDrive
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # environment
@@ -200,7 +200,7 @@ LANG = C
 # environment
 PROCESSOR_LEVEL = 6
 # environment
-VSCODE_PID = 25852
+VSCODE_PID = 34688
 # environment
 USERDOMAIN_ROAMINGPROFILE = R-KOTHARI
 # variable set hash-table stats:
@@ -217,8 +217,7 @@ Load=93/1024=9%, Rehash=0, Collisions=9/111=8%
 # D:\Qt\6.2.4\mingw_64\lib (key D:/Qt/6.2.4/mingw_64/lib, mtime 1646905673): 111 files, no impossibilities.
 # C:\Users\RISHABH\CS771_IITK: could not be stat'd.
 # C:\Program Files (x86)\Lua\5.1: could not be stat'd.
-# C:\Users\RISHABH\Desktop\bin: could not be stat'd 
-.
+# C:\Users\RISHABH\Desktop\bin: could not be stat'd.
 # C:\WINDOWS\System32\WindowsPowerShell\v1.0\ (key C:/WINDOWS/System32/WindowsPowerShell/v1.0/, mtime 1615227296): 30 files, no impossibilities.
 # C:\WINDOWS\System32\Wbem (key C:/WINDOWS/System32/Wbem, mtime 1647363099): 156 files, no impossibilities.
 # . (key d:/CS253, mtime 1648803380): 6 files, no impossibilities.
@@ -323,6 +322,6 @@ make: *** No rule to make target `all'.  Stop.
 
 he free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Tue Apr 05 23:26:04 2022
+# Finished Make data base on Wed Apr 06 09:36:35 2022
 
  
