@@ -193,7 +193,7 @@ librarian_menu::librarian_menu(user_database* all_users, book_database* all_book
                                 case 0:
                                 {
                                     student student_1 = all_users->student_list[user_index[1]];   
-                                    cout << "Returning the book : " << book_1 -> title <<endl;
+                                    cout <<endl<< "Returning the book : " << book_1 -> title <<endl<<endl;
                                     student_1.return_book(book_1);
                                     all_users->student_list[user_index[1]] = student_1;
 
@@ -204,7 +204,7 @@ librarian_menu::librarian_menu(user_database* all_users, book_database* all_book
                                 case 1:
                                 {
                                     professor professor_1 = all_users->professor_list[user_index[2]];
-                                    cout << "Returning the book : " << book_1 ->title <<endl;
+                                    cout << "Returning the book : " << book_1 ->title <<endl <<endl;
                                     professor_1.return_book(book_1);   
                                     all_users->professor_list[user_index[2]] = professor_1;                        
                                     break;

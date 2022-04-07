@@ -11,7 +11,7 @@ professor_menu::professor_menu(user_database* all_users, book_database* all_book
         cout << "Press 1 if you want to display all the books in the database" <<endl;
         cout << "Press 2 if you want to display all your issued books" <<endl;
         cout << "Press 3 if you want to check availability of book" <<endl;
-        cout << "Press 4 if you want to check your fine " <<endl;
+        cout << "Press 4 if you want to check your total fine " <<endl;
         cout << "Press 5 if you want to check return date of your book" << endl;
         cout << "Press 6 if you want to logout" <<endl <<endl;
         int option;
@@ -74,7 +74,7 @@ professor_menu::professor_menu(user_database* all_users, book_database* all_book
                     
                 }
                 else{
-                    professor_1->issued_book_list.book_list[index].show_duedate();
+                    professor_1->issued_book_list.book_list[index].show_duedate(1);
                 }
                 break;
             }

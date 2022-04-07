@@ -18,7 +18,7 @@ class book {
     //Functions
     void display();
     void book_request();
-    void show_duedate();
+    void show_duedate(int type);
     book();
 
     //Friend Class
