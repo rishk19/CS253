@@ -22,7 +22,8 @@ librarian_menu::librarian_menu(user_database* all_users, book_database* all_book
         cout <<"Press 12 if you wish to see the entire professor list"<<endl;
         cout <<"Press 13 if you wish to see the entie librarian list" <<endl;
         cout <<"Press 14 if you wish to see the issuer of a book" <<endl;
-        cout <<"Press 15 if you wish to logout" <<endl<<endl;
+        cout <<"Press 15 if you wish to see the fine of a user for an issued book" <<endl;
+        cout <<"Press 16 if you wish to logout" <<endl<<endl;
         cout <<"Enter your option : ";
         int option;
         cin >> option;
@@ -284,6 +285,75 @@ librarian_menu::librarian_menu(user_database* all_users, book_database* all_book
             }
 
             case 15:
+            {
+                cout << "Enter User ID : ";
+                long long int requested_ID;
+                cin >> requested_ID;
+                cout << endl;
+
+                vector<long long int> indices = all_users->search(requested_ID);
+                if(indices[0]==-1){
+                    cout << "No such user exists in the database !" <<endl <<endl;
+                }
+                else{
+                    switch(all_users->user_list[indices[0]].type){
+
+                        case 0: 
+                        {
+                            student student_1 = all_users->student_list[indices[1]];
+                            cout << "The entire issued book list for the user is : "<<endl <<endl;
+                            student_1.issued_book_list.display();
+                            cout << "Enter Book ISBN : ";
+                            long long int requested_ISBN;
+                            cin >> requested_ISBN;
+                            cout << endl;
+                            long long int index = student_1.issued_book_list.search(requested_ISBN);
+                            if (index == -1){
+                                cout << "No such book has been issued !" <<endl <<endl;
+                            }
+                            else{
+                                student_1.calculate_fine_for_book(student_1.issued_book_list.book_list[index]);
+                            }
+                            break;
+                        }
+
+                        case 1:
+                        {
+                            professor professor_1 = all_users->professor_list[indices[2]];
+                            cout << "The entire issued book list for the user is : "<<endl <<endl;
+                            professor_1.issued_book_list.display();
+                            cout << "Enter Book ISBN : ";
+                            long long int requested_ISBN;
+                            cin >> requested_ISBN;
+                            cout << endl;
+                            long long int index = professor_1.issued_book_list.search(requested_ISBN);
+                            if (index == -1){
+                                cout << "No such book has been issued !" <<endl <<endl;
+                            }
+                            else{
+                                professor_1.calculate_fine_for_book(professor_1.issued_book_list.book_list[index]);
+                            }
+                            break;
+                        }
+
+                        case 2:
+                        {
+                            cout << "Librarians cant issue books !" <<endl<<endl;
+
+                            break;
+                        }
+                        default :
+                        {
+                            cout << "Unsual error occured !" <<endl <<endl;
+                            break;
+                        }
+                    }
+                }
+
+                break;
+            }
+
+            case 16:
             {
                 flag = 0;
                 cout << endl << "Logging out !!" <<endl;

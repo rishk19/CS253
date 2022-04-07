@@ -12,7 +12,8 @@ class professor: public user{
     //Functions
     void issue_book( book* book_1);
     void calculate_fines();
-    void clear_fine_amount();
+    //void clear_fine_amount();
     void return_book( book* book_1);
+    void calculate_fine_for_book(book book_1);
     professor();
 };

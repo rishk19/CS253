@@ -13,7 +13,8 @@ professor_menu::professor_menu(user_database* all_users, book_database* all_book
         cout << "Press 3 if you want to check availability of book" <<endl;
         cout << "Press 4 if you want to check your total fine " <<endl;
         cout << "Press 5 if you want to check return date of your book" << endl;
-        cout << "Press 6 if you want to logout" <<endl <<endl;
+        cout << "Press 6 if you want to check fine for a particular book" <<endl;
+        cout << "Press 7 if you want to logout" <<endl <<endl;
         int option;
 
         cout << "Enter your option : ";
@@ -79,7 +80,27 @@ professor_menu::professor_menu(user_database* all_users, book_database* all_book
                 break;
             }
 
-            case 6:
+            case 6:{
+                cout << "The entire issued book list is : " <<endl <<endl;
+                professor_1->issued_book_list.display();
+                cout <<endl;
+
+                cout << "Enter book ISBN : ";
+                long long int requested_ISBN;
+                cin >> requested_ISBN;
+
+                long long int index = professor_1->issued_book_list.search(requested_ISBN);
+                if(index==-1){
+                    cout <<"You haven't issued this book" << endl <<endl;
+                }  
+                else{
+                    book book_1 = professor_1->issued_book_list.book_list[index];
+                    professor_1 ->calculate_fine_for_book(book_1);
+                }
+                break;
+            }
+
+            case 7:
             {
                 flag = 0;
                 cout << endl << "Logging out !!" <<endl;
