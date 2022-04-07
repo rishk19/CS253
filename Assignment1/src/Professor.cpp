@@ -72,7 +72,7 @@ void professor::calculate_fines(){
             
             cout << "Today month : " << today_month <<endl;
             cout << "Today date : " << today_date <<endl;
-            cout << "TOday year : " << today_year <<endl <<endl;
+            cout << "Today year : " << today_year <<endl <<endl;
 
             days = days_calculator(book_1.issue_date, book_1.issue_month, book_1.issue_year, today_date, today_month, today_year);
             if(days > issue_length){

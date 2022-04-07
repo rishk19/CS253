@@ -3,8 +3,8 @@
 
 using namespace std;
 
-professor_menu::professor_menu(user_database* all_users, book_database* all_books,professor professor_1){
-    cout << endl << "Welcome to Professor Portal " <<  professor_1.name <<endl <<endl;
+professor_menu::professor_menu(user_database* all_users, book_database* all_books,professor* professor_1){
+    cout << endl << "Welcome to Professor Portal " <<  professor_1->name <<endl <<endl;
 
     int flag = 1;
     while(flag){
@@ -12,7 +12,8 @@ professor_menu::professor_menu(user_database* all_users, book_database* all_book
         cout << "Press 2 if you want to display all your issued books" <<endl;
         cout << "Press 3 if you want to check availability of book" <<endl;
         cout << "Press 4 if you want to check your fine " <<endl;
-        cout << "Press 5 if you want to logout" <<endl <<endl;
+        cout << "Press 5 if you want to check return date of your book" << endl;
+        cout << "Press 6 if you want to logout" <<endl <<endl;
         int option;
 
         cout << "Enter your option : ";
@@ -30,10 +31,10 @@ professor_menu::professor_menu(user_database* all_users, book_database* all_book
 
             case 2:
             {
-                long long int n = professor_1.issued_book_list.book_list.size();
+                long long int n = professor_1->issued_book_list.book_list.size();
                 if (n > 0){
                 cout << endl <<"Your issued book list is : "<<endl;
-                professor_1.issued_book_list.display();
+                professor_1->issued_book_list.display();
                 }
                 else{
                     cout << "You havent issued any books." <<endl <<endl;
@@ -56,11 +57,29 @@ professor_menu::professor_menu(user_database* all_users, book_database* all_book
 
             case 4:
             {
-                professor_1.calculate_fines();
+                professor_1->calculate_fines();
                 break;
             }
 
             case 5:
+            {
+                cout << "Enter Book ISBN : ";
+                long long int requested_ISBN;
+                cin >> requested_ISBN;
+                cout <<endl;
+
+                long long int index = professor_1->issued_book_list.search(requested_ISBN);
+                if(index == -1){
+                    cout << "No such book has been issued" <<endl <<endl;
+                    
+                }
+                else{
+                    professor_1->issued_book_list.book_list[index].show_duedate();
+                }
+                break;
+            }
+
+            case 6:
             {
                 flag = 0;
                 cout << endl << "Logging out !!" <<endl;

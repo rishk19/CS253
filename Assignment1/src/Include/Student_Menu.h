@@ -7,5 +7,5 @@ class student_menu{
     public:
 
     // Functions
-    student_menu(user_database* all_users, book_database* all_books, student student_1);
+    student_menu(user_database* all_users, book_database* all_books, student* student_1);
 };

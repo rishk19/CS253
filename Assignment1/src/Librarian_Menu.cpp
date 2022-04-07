@@ -3,8 +3,8 @@
 
 using namespace std;
 
-librarian_menu::librarian_menu(user_database* all_users, book_database* all_books, librarian librarian_1){
-    cout << endl << "Welcome to the Librarian Portal " << librarian_1.name << endl <<endl;
+librarian_menu::librarian_menu(user_database* all_users, book_database* all_books, librarian* librarian_1){
+    cout << endl << "Welcome to the Librarian Portal " << librarian_1->name << endl <<endl;
 
     int flag = 1;
     while(flag){
@@ -21,7 +21,8 @@ librarian_menu::librarian_menu(user_database* all_users, book_database* all_book
         cout <<"Press 11 if you wish to see the entire student list"<<endl;
         cout <<"Press 12 if you wish to see the entire professor list"<<endl;
         cout <<"Press 13 if you wish to see the entie librarian list" <<endl;
-        cout <<"Press 14 if you wish to logout" <<endl<<endl;
+        cout <<"Press 14 if you wish to see the issuer of a book" <<endl;
+        cout <<"Press 15 if you wish to logout" <<endl<<endl;
         cout <<"Enter your option : ";
         int option;
         cin >> option;
@@ -38,6 +39,7 @@ librarian_menu::librarian_menu(user_database* all_users, book_database* all_book
             {
                 cout <<"You have entered the portal to remove books from the database !" <<endl <<endl;
                 all_books->remove();
+                cout <<endl;
                 break;
             }
 
@@ -174,7 +176,7 @@ librarian_menu::librarian_menu(user_database* all_users, book_database* all_book
                             cout << "Librarians can't issue books !!" <<endl <<endl;
 
                     }
-                    if(all_users->user_list[user_index[0]].type){
+                    if(all_users->user_list[user_index[0]].type !=2){
                         cout << "Enter Book ISBN : ";
                         long long int requested_ISBN;
                         cin >> requested_ISBN;
@@ -183,7 +185,7 @@ librarian_menu::librarian_menu(user_database* all_users, book_database* all_book
                             cout << "No such book found in the database. " <<endl <<endl;
                         }
                         else{
-                            cout << "The user is : " <<endl<<endl;
+                            cout << "The user is : " <<endl;
                             all_users->user_list[user_index[0]].display();
                             int type = all_users->user_list[user_index[0]].type;
                             book* book_1 = &(all_books->book_list[book_index]);
@@ -203,7 +205,7 @@ librarian_menu::librarian_menu(user_database* all_users, book_database* all_book
                                 {
                                     professor professor_1 = all_users->professor_list[user_index[2]];
                                     cout << "Returning the book : " << book_1 ->title <<endl;
-                                    professor_1.issue_book(book_1);   
+                                    professor_1.return_book(book_1);   
                                     all_users->professor_list[user_index[2]] = professor_1;                        
                                     break;
                                 }
@@ -264,6 +266,24 @@ librarian_menu::librarian_menu(user_database* all_users, book_database* all_book
             }
 
             case 14:
+            {
+                cout << "Enter Book ISBN : ";
+                long long int requested_ISBN;
+                cin >> requested_ISBN;
+                cout <<endl;
+                long long int index = all_books->search(requested_ISBN);
+                if(index == -1){
+                    cout << "The book has not been issued by anyone";
+                }
+                else{
+                    book book_1 = all_books->book_list[index];
+                    cout << "The book has been issued by user ID : " << book_1.issuer_ID; 
+                }
+
+
+            }
+
+            case 15:
             {
                 flag = 0;
                 cout << endl << "Logging out !!" <<endl;

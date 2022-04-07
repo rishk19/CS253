@@ -140,6 +140,7 @@ initialization::initialization(){
             {
                 flag2 = 0;
                 cout <<endl;
+                break;
             }
 
             default:

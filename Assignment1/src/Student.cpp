@@ -27,12 +27,18 @@ void student::issue_book(book* book_1){
     cout << endl;
 
     if(valid_date_checker(issue_month, issue_year,issue_date)){
-        book_1->issue_date = issue_date;
-        book_1->issue_month = issue_month;
-        book_1-> issue_year = issue_year;
-        book_1 -> issue_status = 1;
-        issued_book_list.book_list.push_back(*book_1);
-        cout << "The book has been issued successfully !" <<endl<<endl;
+        if(book_1 -> issue_status == 0){
+            book_1->issue_date = issue_date;
+            book_1->issue_month = issue_month;
+            book_1-> issue_year = issue_year;
+            book_1 -> issue_status = 1;
+            book_1 ->issuer_ID = id;
+            issued_book_list.book_list.push_back(*book_1);
+            cout << "The book has been issued successfully !" <<endl<<endl;
+        }
+        else{
+            cout << "The book has already been issued by someone !" <<endl << endl; 
+        }
 
     }
     else{
@@ -70,7 +76,7 @@ void student::calculate_fines(){
             
             cout << "Today month : " << today_month <<endl;
             cout << "Today date : " << today_date <<endl;
-            cout << "TOday year : " << today_year <<endl <<endl;
+            cout << "Today year : " << today_year <<endl <<endl;
             days = days_calculator(book_1.issue_date, book_1.issue_month, book_1.issue_year, today_date, today_month, today_year);
             //cout << days <<endl;
             if(days > issue_length){
