@@ -27,11 +27,11 @@ void student::issue_book(book* book_1){
     cout << endl;
 
     if(valid_date_checker(issue_month, issue_year,issue_date)){
-        issued_book_list.book_list.push_back(*book_1);
         book_1->issue_date = issue_date;
         book_1->issue_month = issue_month;
         book_1-> issue_year = issue_year;
         book_1 -> issue_status = 1;
+        issued_book_list.book_list.push_back(*book_1);
         cout << "The book has been issued successfully !" <<endl<<endl;
 
     }
@@ -64,9 +64,22 @@ void student::calculate_fines(){
         for (i=0;i<n;i++){
             long long int days;
             book book_1 = issued_book_list.book_list[i];
+            cout << "Issue month : " << book_1.issue_month <<endl;
+            cout << "Issue date : " << book_1.issue_date <<endl;
+            cout << "Issue year : " << book_1.issue_year <<endl <<endl; 
+            
+            cout << "Today month : " << today_month <<endl;
+            cout << "Today date : " << today_date <<endl;
+            cout << "TOday year : " << today_year <<endl <<endl;
             days = days_calculator(book_1.issue_date, book_1.issue_month, book_1.issue_year, today_date, today_month, today_year);
+            //cout << days <<endl;
             if(days > issue_length){
                 fine+= (days - issue_length)*fine_per_day;
+            }   
+            if(days < 0){
+                fine = 0;
+                cout << "You have entered incorrect date, a book has been issued after this date" << endl <<endl;
+                return; 
             }            
         }
         cout << "The total fine is : " << fine <<endl <<endl;

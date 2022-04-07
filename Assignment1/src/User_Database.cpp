@@ -26,46 +26,53 @@ void user_database::add(){
     cout << "Enter your option : ";
     cin >>i;
     cout <<endl;
+    vector<long long int> indices = search(user_1.id);
+    
 
-    switch(i){
-        case 0 :
-        {   
-            user_1.type = 0;
-            student student_1;
-            student_1.name = user_1.name;
-            student_1.id = user_1.id;
-            student_1.password = user_1.password;
-            student_list.push_back(student_1);
-            user_list.push_back(user_1);
-            break;
-        }
-        case 1 :
-        {   
-            user_1.type = 1;
-            professor professor_1;
-            professor_1.name = user_1.name;
-            professor_1.id = user_1.id;
-            professor_1.password = user_1.password;
-            professor_list.push_back(professor_1);
-            user_list.push_back(user_1);
-            break;
-        }
-        
-        case 2:
-        {   
-            user_1.type = 2;
-            librarian librarian_1;
-            librarian_1.name = user_1.name;
-            librarian_1.id = user_1.id;
-            librarian_1.password = user_1.password;
-            librarian_list.push_back(librarian_1);
-            user_list.push_back(user_1);
-            break;
-        }
-        default :
-            cout <<"Incorrect operation the process did not complete. Please try again !";
-            break;
+    if (indices[0] == -1){
+        switch(i){
+            case 0 :
+            {   
+                user_1.type = 0;
+                student student_1;
+                student_1.name = user_1.name;
+                student_1.id = user_1.id;
+                student_1.password = user_1.password;
+                student_list.push_back(student_1);
+                user_list.push_back(user_1);
+                break;
+            }
+            case 1 :
+            {   
+                user_1.type = 1;
+                professor professor_1;
+                professor_1.name = user_1.name;
+                professor_1.id = user_1.id;
+                professor_1.password = user_1.password;
+                professor_list.push_back(professor_1);
+                user_list.push_back(user_1);
+                break;
+            }
+            
+            case 2:
+            {   
+                user_1.type = 2;
+                librarian librarian_1;
+                librarian_1.name = user_1.name;
+                librarian_1.id = user_1.id;
+                librarian_1.password = user_1.password;
+                librarian_list.push_back(librarian_1);
+                user_list.push_back(user_1);
+                break;
+            }
+            default :
+                cout <<"Incorrect operation the process did not complete. Please try again !" <<endl <<endl;
+                break;
 
+        }
+    }
+    else{
+        cout << "A user with that ID already exists !" <<endl <<endl;
     }
     return;
 }

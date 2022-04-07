@@ -23,8 +23,13 @@ void book_database::add(void){
     cin.ignore();
     getline(cin>>ws ,book_1.publication);
     cout << endl;
-
-    book_list.push_back(book_1);
+    long long int index = search(book_1.ISBN);
+    if(index == -1){
+        book_list.push_back(book_1);
+    }
+    else{
+        cout << "A book with that ISBN already exists in the database !" <<endl <<endl;
+    }
     return;
 }
 
@@ -113,5 +118,6 @@ void book_database::display(){
     long long int n = book_list.size();
     for (long long int i = 0; i<n;i++){
         book_list[i].display();
+        cout <<endl;
     }
 }

@@ -18,7 +18,11 @@ initialization::initialization(){
         cout << "Press 1 if you wish to an user add to the database" <<endl;
         cout << "Press 2 if you wish to an user delete an entry to the database" <<endl;
         cout << "Press 3 if you wish to update an user of the database" <<endl ;
-        cout << "Press 4 if you wish to end the initialization of the user database" <<endl << endl;
+        cout << "Press 4 if you wish to see the entire user database" <<endl;
+        cout << "Press 5 if you wish to see the entire student database" <<endl;
+        cout << "Press 6 if you wish to see the entire professor database" <<endl;
+        cout << "Press 7 if you wish to see the entire librarian database" <<endl;
+        cout << "Press 8 if you wish to end the initialization of the user database" <<endl << endl;
         cout << "Enter your option : ";
 
 
@@ -48,12 +52,40 @@ initialization::initialization(){
             case 4:
             {   
                 all_users.display();
-                all_users.show_students();
-                all_users.show_professors();
-                all_users.show_librarians();
-                flag1 = 0;
+                //all_users.show_students();
+                //all_users.show_professors();
+                //all_users.show_librarians();
+                //flag1 = 0;
                 cout << endl;
                 //login logging_in(&all_users);
+                break;
+            }
+
+            case 5:
+            {
+                all_users.show_students();
+                cout <<endl;
+                break;
+            }
+
+            case 6:
+            {
+                all_users.show_professors();
+                cout <<endl;
+                break;
+            }
+
+            case 7:
+            {
+                all_users.show_librarians();
+                cout <<endl;
+                break;
+            }
+
+            case 8:
+            {
+                flag1 = 0;
+                cout <<endl;
                 break;
             }
 
@@ -71,10 +103,12 @@ initialization::initialization(){
         cout << "Press 1 if you wish to add a new book to the database" << endl;
         cout << "Press 2 if you want to remove a book from the database" << endl;
         cout << "Press 3 if you want to update a book from the database" <<endl;
-        cout << "Press 4 if you want to end the initialization of the book database" <<endl <<endl;
+        cout << "Press 4 if you want to view the entire book database" <<endl;
+        cout << "Press 5 if you want to end the initialization of the book database" <<endl <<endl;
         cout << "Enter your option : ";
         int option ;
         cin >> option;
+        cout <<endl;
         switch(option){
             case 1 :
             {
@@ -96,14 +130,21 @@ initialization::initialization(){
 
             case 4:
             {
-                flag2 = 0;
+                cout << "The entire book list is as follows : "<<endl;
                 all_books.display();
+                cout <<endl;
                 break;
+            }
+
+            case 5:
+            {
+                flag2 = 0;
+                cout <<endl;
             }
 
             default:
             {
-                cout << "Wrong option selected";
+                cout << "Wrong option selected" << endl <<endl;
                 break;
             }
 
@@ -131,7 +172,7 @@ initialization::initialization(){
             }
             default :
             {
-                cout << "Wrong option selected" <<endl; 
+                cout << "Wrong option selected" <<endl <<endl; 
                 break;
             }
         }
